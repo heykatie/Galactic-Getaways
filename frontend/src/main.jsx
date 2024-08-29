@@ -7,8 +7,19 @@ import './index.css';
 import { Provider } from 'react-redux';
 import configureStore from './store/index.js';
 
+import { restoreCSRF, csrfFetch } from './store/csrf';
+
+// setup store
 const store = configureStore();
 if (process.env.NODE_ENV !== 'production') window.store = store;
+
+// call the restoreCSRF function when in development & attach the custom csrfFetch function onto the window
+if (import.meta.env.MODE !== 'production') {
+	restoreCSRF();
+
+	window.csrfFetch = csrfFetch;
+	window.store = store;
+}
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
