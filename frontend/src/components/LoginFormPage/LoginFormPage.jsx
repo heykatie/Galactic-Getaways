@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import * as sessionActions from '../../store/session'
 import { Navigate } from 'react-router-dom';
+import './LoginForm.css';
 
 export default function LoginFormPage() {
   const dispatch = useDispatch();
@@ -28,7 +29,7 @@ export default function LoginFormPage() {
     <div>
       <h1>Log In</h1>
       <form onSubmit={onSubmit}>
-        <label>Credentials: </label>
+        <label htmlFor='credential'>Credentials: </label>
         <input
           type='text'
           name='credential'
@@ -37,8 +38,7 @@ export default function LoginFormPage() {
           onChange={e => setCredential(e.target.value)}
           required
         />
-        <br></br>
-        <label>Password: </label>
+        <label htmlFor='password'>Password: </label>
         <input
           type='password'
           name='password'
@@ -46,9 +46,10 @@ export default function LoginFormPage() {
           onChange={e => setPassword(e.target.value)}
           required
         />
-        {errors.credential && <p>{errors.credential}</p>}
-        <br></br>
-        <button>Log In</button>
+        {errors.credential &&
+          <p className='error'>{errors.credential}</p>
+        }
+        <button type='submit'>Log In</button>
       </form>
     </div>
   )
