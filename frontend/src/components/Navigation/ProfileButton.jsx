@@ -1,16 +1,41 @@
-import { FaCarrot } from 'react-icons/fa';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { RiAliensFill } from 'react-icons/ri';
+import * as sessionActions from '../../store/session';
 
-export default function ProfileButton() {
-  const Carrot = () => {
-    return (
-      <div style={{ color: 'orange', fontSize: '2rem' }}>
-        <FaCarrot />
-      </div>
-    );
+function ProfileButton({ user }) {
+	const dispatch = useDispatch();
+
+	const logout = (e) => {
+		e.preventDefault();
+		dispatch(sessionActions.logout());
   };
-  return (
-    <>
-    {Carrot()}
-    </>
-  )
+
+  const Carrot = () => {
+		return (
+			<div style={{ color: 'orange', fontSize: '100px' }}>
+				<Carrot />
+			</div>
+		);
+  };
+
+	return (
+		<>
+			<button>
+				<Carrot />
+			</button>
+			<ul className='profile-dropdown'>
+				<li>{user.username}</li>
+				<li>
+					{user.firstName} {user.lastName}
+				</li>
+				<li>{user.email}</li>
+				<li>
+					<button onClick={logout}>Log Out</button>
+				</li>
+			</ul>
+		</>
+	);
 }
+
+export default ProfileButton;

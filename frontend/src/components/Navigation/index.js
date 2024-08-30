@@ -1,3 +1,3 @@
-import Navbar from './Navbar';
+import Navigation from './Navigation.jsx';
 
-export default Navbar;
+export default Navigation;

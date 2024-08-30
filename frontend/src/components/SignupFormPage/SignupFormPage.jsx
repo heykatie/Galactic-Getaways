@@ -2,11 +2,11 @@ import './SignupForm.css';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
-import { signup } from '../../store/session';
+import * as sessionActions from '../../store/session';
 
-export default function SignupFormPage() {
+function SignupFormPage() {
 	const dispatch = useDispatch();
-
+	const sessionUser = useSelector((state) => state.session.user);
 	const [email, setEmail] = useState('');
 	const [username, setUsername] = useState('');
 	const [firstName, setFirstName] = useState('');
@@ -15,89 +15,101 @@ export default function SignupFormPage() {
 	const [confirmPassword, setConfirmPassword] = useState('');
 	const [errors, setErrors] = useState({});
 
-	const sessionUser = useSelector((state) => state.session.user);
 	if (sessionUser) return <Navigate to='/' replace={true} />;
 
-	const onSubmit = async (e) => {
+	const handleSubmit = (e) => {
 		e.preventDefault();
-		setErrors({});
-
-    if (password !== confirmPassword) {
-      return setErrors({
-        confirmPassword:
-          'Confirm Password field must be the same as the Password field',
-      });
-    }
-
-    try {
-      await dispatch(signup({ email, username, firstName, lastName, password}))
-    } catch (err) {
-      setErrors(err.errors)
+		if (password === confirmPassword) {
+			setErrors({});
+			return dispatch(
+				sessionActions.signup({
+					email,
+					username,
+					firstName,
+					lastName,
+					password,
+				})
+			).catch(async (res) => {
+				const data = await res.json();
+				if (data?.errors) {
+					setErrors(data.errors);
+				}
+			});
 		}
+		return setErrors({
+			confirmPassword:
+				'Confirm Password field must be the same as the Password field',
+		});
 	};
 
 	return (
-		<div id='signup'>
+		<>
 			<h1>Sign Up</h1>
-
-			<form id='signup-form' onSubmit={onSubmit}>
-				<label htmlFor='email'>Email: </label>
-				<input
-					type='text'
-					name='email'
-					value={email}
-					onChange={(e) => setEmail(e.target.value)}
-					required
-				/>
-				{errors.email && <p className='error'>{errors.email}</p>}
-				<label htmlFor='username'>Username: </label>
-				<input
-					type='text'
-					name='username'
-					value={username}
-					onChange={(e) => setUsername(e.target.value)}
-					required
-				/>
-				{errors.username && <p className='error'>{errors.username}</p>}
-				<label htmlFor='first-name'>First Name: </label>
-				<input
-					type='text'
-					name='first-name'
-					value={firstName}
-					onChange={(e) => setFirstName(e.target.value)}
-					required
-				/>
-				{errors.firstName && <p className='error'>{errors.firstName}</p>}
-				<label htmlFor='last-name'>Last Name: </label>
-				<input
-					type='text'
-					name='last-name'
-					value={lastName}
-					onChange={(e) => setLastName(e.target.value)}
-					required
-				/>
-				{errors.lastName && <p className='error'>{errors.lastName}</p>}
-				<label htmlFor='password'>Password: </label>
-				<input
-					type='password'
-					name='password'
-					value={password}
-					onChange={(e) => setPassword(e.target.value)}
-					required
-				/>
-				{errors.password && <p className='error'>{errors.password}</p>}
-				<label htmlFor='confirm-password'>Confirm Password: </label>
-				<input
-					type='password'
-					name='confirm-password'
-					value={confirmPassword}
-					onChange={(e) => setConfirmPassword(e.target.value)}
-					required
-				/>
-				{errors.confirmPassword && <p className='error'>{errors.confirmPassword}</p>}
-
-				<button>Sign Up</button>
+			<form onSubmit={handleSubmit}>
+				<label>
+					Email
+					<input
+						type='text'
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
+						required
+					/>
+				</label>
+				{errors.email && <p>{errors.email}</p>}
+				<label>
+					Username
+					<input
+						type='text'
+						value={username}
+						onChange={(e) => setUsername(e.target.value)}
+						required
+					/>
+				</label>
+				{errors.username && <p>{errors.username}</p>}
+				<label>
+					First Name
+					<input
+						type='text'
+						value={firstName}
+						onChange={(e) => setFirstName(e.target.value)}
+						required
+					/>
+				</label>
+				{errors.firstName && <p>{errors.firstName}</p>}
+				<label>
+					Last Name
+					<input
+						type='text'
+						value={lastName}
+						onChange={(e) => setLastName(e.target.value)}
+						required
+					/>
+				</label>
+				{errors.lastName && <p>{errors.lastName}</p>}
+				<label>
+					Password
+					<input
+						type='password'
+						value={password}
+						onChange={(e) => setPassword(e.target.value)}
+						required
+					/>
+				</label>
+				{errors.password && <p>{errors.password}</p>}
+				<label>
+					Confirm Password
+					<input
+						type='password'
+						value={confirmPassword}
+						onChange={(e) => setConfirmPassword(e.target.value)}
+						required
+					/>
+				</label>
+				{errors.confirmPassword && <p>{errors.confirmPassword}</p>}
+				<button type='submit'>Sign Up</button>
 			</form>
-		</div>
+		</>
 	);
 }
+
+export default SignupFormPage;
