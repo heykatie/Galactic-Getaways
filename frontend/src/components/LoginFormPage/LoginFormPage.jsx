@@ -28,7 +28,7 @@ export default function LoginFormPage() {
   };
 
   return (
-		<div>
+		<div id='signup'>
 			<h1>Log In</h1>
 
 			<form id='login-form' onSubmit={handleSubmit}>

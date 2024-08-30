@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import {useDispatch} from 'react-redux'
 import { restoreUser } from './store/session';
 import LoginFormPage from './components/LoginFormPage';
+import SignupFormPage from './components/SignupFormPage';
 // import Navigation from './components/Navigation';
 
 const Layout = () => {
@@ -36,7 +37,11 @@ const routes = [
           },
           {
             path: 'login',
-            element: <LoginFormPage/>
+            element: <LoginFormPage />
+          },
+          {
+            path: 'signup',
+            element: <SignupFormPage />
           }
 				],
       },
