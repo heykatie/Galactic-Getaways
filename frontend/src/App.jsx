@@ -1,12 +1,24 @@
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import {useDispatch} from 'react-redux'
+import { restoreUser } from './store/session';
 import LoginFormPage from './components/LoginFormPage';
 // import Navigation from './components/Navigation';
 
 const Layout = () => {
+  const dispatch = useDispatch();
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => () => {
+    dispatch(restoreUser()).then(() => {
+      setLoaded(true);
+    })
+  }, [dispatch]);
+
   return (
 		<main>
-      {/* <Navigation /> */}
-      <Outlet />
+			{/* <Navigation /> */}
+			{loaded && <Outlet />}
 		</main>
   );
 }
