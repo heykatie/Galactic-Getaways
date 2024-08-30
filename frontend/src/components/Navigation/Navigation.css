@@ -3,7 +3,7 @@
 
 ul {
   list-style-type: none;
-  /* Removes the default bullet points */
+  /* Removes bullet points */
   margin: 0;
   padding: 0;
   display: flex;
@@ -16,7 +16,8 @@ ul {
 
 li {
   margin: 0 10px;
-  /* Spacing between list items */
+  position: relative;
+  /* Allows absolute positioning of the dropdown */
 }
 
 a {
@@ -30,23 +31,71 @@ a {
 
 a:hover {
   color: #3498db;
-  /* Matches the button hover color */
+  /* Matches button hover color */
 }
 
 button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  background-color: #3498db;
-  color: white;
-  padding: 10px 15px;
+  background-color: transparent;
+  /* Makes button background transparent */
   border: none;
-  border-radius: 5px;
+  color: #333;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
 }
 
 button:hover {
-  background-color: #2980b9;
-  /* Slightly darker blue for hover effect */
+  color: #3498db;
+}
+
+/* Profile Dropdown Menu */
+.profile-dropdown {
+  position: absolute;
+  top: 40px;
+  /* Adjusts the position of the dropdown */
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  min-width: 150px;
+  z-index: 10;
+  /* Ensures it appears above other elements */
+  padding: 0;
+}
+
+.profile-dropdown.hidden {
+  display: none;
+}
+
+.profile-dropdown li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.profile-dropdown li:last-child {
+  border-bottom: none;
+  /* Removes border from the last item */
+}
+
+.profile-dropdown li button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+.profile-dropdown li button:hover {
+  background-color: #f0f0f0;
+  /* Light gray background on hover */
 }
