@@ -23,18 +23,18 @@ const removeUser = () => {
 export const login = (user) => async (dispatch) => {
   const { credential, password } = user;
   const res = await csrfFetch('/api/session', {
-		method: 'POST',
-		body: JSON.stringify({
-			credential,
-			password,
-		}),
+    method: 'POST',
+    body: JSON.stringify({ credential, password }),
   });
 
   if (res.ok) {
     const data = await res.json();
     dispatch(setUser(data.user));
+    return data.user;
+  } else {
+    const errorData = await res.json();
+    throw new Error(errorData.message || 'Failed log in');
   }
-  return res;
 }
 
 export const removeUserThunk = () => async (dispatch) => {
