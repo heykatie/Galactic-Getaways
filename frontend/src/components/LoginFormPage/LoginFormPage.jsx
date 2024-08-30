@@ -18,6 +18,7 @@ export default function LoginFormPage() {
   const handleSubmit = async (e) => {
 		e.preventDefault();
 		setErrors({});
+		
     try {
 			await dispatch(login({ credential, password }));
 		} catch (err) {
