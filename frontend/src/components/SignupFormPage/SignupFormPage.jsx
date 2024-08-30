@@ -16,7 +16,7 @@ export default function SignupFormPage() {
 	const [errors, setErrors] = useState({});
 
 	const sessionUser = useSelector((state) => state.session.user);
-	if (sessionUser) <Navigate to='/' replace={true} />;
+	if (sessionUser) return <Navigate to='/' replace={true} />;
 
 	const onSubmit = async (e) => {
 		e.preventDefault();
