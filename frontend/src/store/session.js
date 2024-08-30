@@ -63,8 +63,12 @@ export const restoreUser = () => async (dispatch) => {
   return res;
 }
 
-export const removeUserThunk = () => async (dispatch) => {
-
+export const logout = () => async (dispatch) => {
+  const res = await csrfFetch('/api/session', {
+    method: 'DELETE'
+  });
+  dispatch(removeUser());
+  return res;
 }
 
 // {
