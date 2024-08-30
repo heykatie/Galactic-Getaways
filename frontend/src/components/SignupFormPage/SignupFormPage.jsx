@@ -49,7 +49,7 @@ export default function SignupFormPage() {
 					onChange={(e) => setEmail(e.target.value)}
 					required
 				/>
-				{errors.email && <p>{errors.email}</p>}
+				{errors.email && <p className='error'>{errors.email}</p>}
 				<label htmlFor='username'>Username: </label>
 				<input
 					type='text'
@@ -58,7 +58,7 @@ export default function SignupFormPage() {
 					onChange={(e) => setUsername(e.target.value)}
 					required
 				/>
-				{errors.username && <p>{errors.username}</p>}
+				{errors.username && <p className='error'>{errors.username}</p>}
 				<label htmlFor='first-name'>First Name: </label>
 				<input
 					type='text'
@@ -67,7 +67,7 @@ export default function SignupFormPage() {
 					onChange={(e) => setFirstName(e.target.value)}
 					required
 				/>
-				{errors.firstName && <p>{errors.firstName}</p>}
+				{errors.firstName && <p className='error'>{errors.firstName}</p>}
 				<label htmlFor='last-name'>Last Name: </label>
 				<input
 					type='text'
@@ -76,7 +76,7 @@ export default function SignupFormPage() {
 					onChange={(e) => setLastName(e.target.value)}
 					required
 				/>
-				{errors.lastName && <p>{errors.lastName}</p>}
+				{errors.lastName && <p className='error'>{errors.lastName}</p>}
 				<label htmlFor='password'>Password: </label>
 				<input
 					type='password'
@@ -85,7 +85,7 @@ export default function SignupFormPage() {
 					onChange={(e) => setPassword(e.target.value)}
 					required
 				/>
-				{errors.password && <p>{errors.password}</p>}
+				{errors.password && <p className='error'>{errors.password}</p>}
 				<label htmlFor='confirm-password'>Confirm Password: </label>
 				<input
 					type='password'
@@ -94,7 +94,7 @@ export default function SignupFormPage() {
 					onChange={(e) => setConfirmPassword(e.target.value)}
 					required
 				/>
-				{errors.confirmPassword && <p>{errors.confirmPassword}</p>}
+				{errors.confirmPassword && <p className='error'>{errors.confirmPassword}</p>}
 
 				<button>Sign Up</button>
 			</form>
