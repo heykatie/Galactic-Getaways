@@ -8,21 +8,18 @@ import Navbar from './components/Navigation';
 
 const Layout = () => {
 	const dispatch = useDispatch();
-	const [loaded, setLoaded] = useState(false);
+	const [isLoaded, setIsLoaded] = useState(false);
 
-	useEffect(
-		() => () => {
-			dispatch(restoreUser()).then(() => {
-				setLoaded(true);
-			});
-		},
-		[dispatch]
+	useEffect(() => () => {
+    dispatch(restoreUser()).then(() => {
+      setIsLoaded(true);
+    })}, [dispatch]
 	);
 
 	return (
 		<main>
 			<Navbar />
-			{loaded && <Outlet />}
+			{isLoaded && <Outlet />}
 		</main>
 	);
 };

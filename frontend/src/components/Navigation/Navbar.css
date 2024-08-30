@@ -1,44 +1,34 @@
-/* General styling for navbar */
 .navbar {
   background-color: #ffffff;
-  /* White background to match the form */
   border-bottom: 1px solid #ddd;
-  /* Light gray bottom border for separation */
   padding: 10px 20px;
-  /* Spacing around the content */
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-family: 'Roboto', sans-serif;
   position: sticky;
-  /* Sticks to the top of the page */
   top: 0;
   z-index: 1000;
+  /* flex-direction: row; */
 }
 
-/* Logo styling */
 .navbar-logo {
   font-family: 'Montserrat', sans-serif;
-  /* Heading font */
   font-weight: 700;
   font-size: 20px;
   color: #222;
-  /* Dark text color */
   text-decoration: none;
 }
 
-/* Navigation links styling */
-.navbar-links {
+.navbar-links li {
   display: flex;
   gap: 20px;
-  list-style: none
+  list-style: none;
 }
 
 .navbar-links a {
   color: #333;
-  /* Darker text color for contrast */
   text-decoration: none;
-  /* Removes underline */
   font-weight: 500;
   padding: 5px 10px;
   transition: color 0.3s ease;
@@ -46,15 +36,12 @@
 
 .navbar-links a:hover {
   color: #3498db;
-  /* Same blue as the buttons on hover */
 }
 
-/* Button style for navbar actions */
 #navbar-button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   background-color: #3498db;
-  /* Blue background to match form buttons */
   color: white;
   padding: 8px 15px;
   border: none;
@@ -66,10 +53,16 @@
 
 #navbar-button:hover {
   background-color: #2980b9;
-  /* Darker blue on hover */
 }
 
-/* Responsive design for smaller screens */
+#logged-out-nav {
+  flex-direction: row;
+}
+
+#logged-in-nav {
+  flex-direction: row;
+}
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
