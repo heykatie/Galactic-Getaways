@@ -22,3 +22,117 @@
   position: absolute;
   background-color: white;
 }
+
+/* Overlay for the modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent black background */
+  z-index: 999;
+  /* Ensure it's on top of other content */
+}
+
+/* Modal content container */
+.modal-container {
+  position: fixed;
+  top: 100px;
+  /* 100px from the top */
+  left: 50%;
+  transform: translateX(-50%);
+  /* Center horizontally */
+  background-color: var(--white);
+  border-radius: 8px;
+  /* Rounded corners */
+  padding: 20px;
+  /* Margin around content */
+  max-width: 500px;
+  width: 90%;
+  /* Allows modal to be responsive */
+  z-index: 1000;
+  /* Above the overlay */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle drop shadow */
+}
+
+/* Modal title */
+.modal-title {
+  text-align: center;
+  /* Centered title */
+  font-size: 18pt;
+  margin-bottom: 20px;
+  /* Decent margin below the title */
+}
+
+/* Input fields */
+.modal-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  /* Even spacing between inputs */
+  background-color: #E8F0FE;
+  /* Light teal background */
+  border: 1px solid var(--light-gray);
+  border-radius: 4px;
+  font-size: 14pt;
+  color: var(--black);
+}
+
+/* Placeholder text for input fields */
+.modal-input::placeholder {
+  color: var(--dark-gray);
+}
+
+/* Enabled button */
+.modal-button-enabled {
+  width: 100%;
+  /* Full width */
+  padding: 10px;
+  background-color: #FF5A5F;
+  /* Red background */
+  color: var(--white);
+  border: 1px solid var(--black);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14pt;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Disabled button */
+.modal-button-disabled {
+  width: 100%;
+  /* Full width */
+  padding: 10px;
+  background-color: var(--white);
+  /* White background */
+  color: var(--light-gray);
+  /* Light gray text */
+  border: 1px solid var(--light-gray);
+  /* Light gray border */
+  border-radius: 4px;
+  font-size: 14pt;
+  text-align: center;
+  margin-top: 10px;
+  cursor: not-allowed;
+  /* No pointer cursor for disabled button */
+}
+
+/* Link */
+.modal-link {
+  color: #00525E;
+  /* Dark teal */
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* Link on hover */
+.modal-link:hover {
+  text-decoration: underline;
+  /* Shows underline on hover */
+}
