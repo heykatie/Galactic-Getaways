@@ -15,10 +15,10 @@ function Layout() {
 	}, [dispatch]);
 
 	return (
-		<>
+		<main>
 			<Navigation isLoaded={isLoaded} />
 			{isLoaded && <Outlet />}
-		</>
+		</main>
 	);
 }
 
