@@ -1,9 +1,92 @@
-/* Navigation.css */
+/* Navigation Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #343a40;
+  /* Dark background for navigation */
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #f1f1f1;
+}
+
+/* Profile Button and Dropdown Styles */
+.profile-button {
+  position: relative;
+}
+
+.profile-button button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.profile-button button:hover {
+  color: #f1f1f1;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 100%;
+  /* Position below the button */
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+  /* Ensure dropdown is on top */
+  width: 200px;
+  /* Adjust width as needed */
+}
+
+.profile-dropdown li {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-dropdown li:hover {
+  background-color: #f8f9fa;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Navigation.css
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap');
 
 ul {
   list-style-type: none;
-  /* Removes bullet points */
   margin: 0;
   padding: 0;
   display: flex;
@@ -17,7 +100,6 @@ ul {
 li {
   margin: 0 10px;
   position: relative;
-  /* Allows absolute positioning of the dropdown */
 }
 
 a {
@@ -31,14 +113,12 @@ a {
 
 a:hover {
   color: #3498db;
-  /* Matches button hover color */
 }
 
 button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   background-color: transparent;
-  /* Makes button background transparent */
   border: none;
   color: #333;
   cursor: pointer;
@@ -52,11 +132,9 @@ button:hover {
   color: #3498db;
 }
 
-/* Profile Dropdown Menu */
 .profile-dropdown {
   position: absolute;
   top: 40px;
-  /* Adjusts the position of the dropdown */
   right: 0;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -66,7 +144,6 @@ button:hover {
   font-size: 14px;
   min-width: 150px;
   z-index: 10;
-  /* Ensures it appears above other elements */
   padding: 0;
 }
 
@@ -81,7 +158,6 @@ button:hover {
 
 .profile-dropdown li:last-child {
   border-bottom: none;
-  /* Removes border from the last item */
 }
 
 .profile-dropdown li button {
@@ -97,5 +173,4 @@ button:hover {
 
 .profile-dropdown li button:hover {
   background-color: #f0f0f0;
-  /* Light gray background on hover */
-}
+} */
