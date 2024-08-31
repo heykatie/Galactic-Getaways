@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Outlet, Navigate } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import * as sessionActions from './store/session';
 
@@ -30,6 +30,10 @@ const router = createBrowserRouter([
 				path: '/',
 				element: <h1>Welcome to Galactic Getaways!</h1>,
 			},
+			{
+				path: '*',
+				element: <Navigate to='/' />
+			}
 		],
 	},
 ]);
