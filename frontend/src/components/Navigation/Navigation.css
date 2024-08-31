@@ -1,101 +1,41 @@
-/* Navigation.css */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap');
-
-ul {
-  list-style-type: none;
-  /* Removes bullet points */
-  margin: 0;
-  padding: 0;
+.navigation {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  background-color: #f9f9f9;
-  border-bottom: 1px solid #ddd;
-  font-family: 'Roboto', sans-serif;
+  padding: 10px;
 }
 
-li {
+.navigation-list {
+  list-style: none;
+  display: flex;
+}
+
+.navigation-list li {
   margin: 0 10px;
-  position: relative;
-  /* Allows absolute positioning of the dropdown */
 }
 
-a {
+.navigation-link {
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
   color: #333;
-  padding: 10px 15px;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #3498db;
-  /* Matches button hover color */
-}
-
-button {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  background-color: transparent;
-  /* Makes button background transparent */
-  border: none;
-  color: #333;
-  cursor: pointer;
   font-size: 16px;
-  display: flex;
-  align-items: center;
-  transition: color 0.3s ease;
+  font-weight: bold;
 }
 
-button:hover {
-  color: #3498db;
+.navigation-link:hover {
+  text-decoration: underline;
+  color: #007bff;
 }
 
-/* Profile Dropdown Menu */
-.profile-dropdown {
-  position: absolute;
-  top: 40px;
-  /* Adjusts the position of the dropdown */
-  right: 0;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  min-width: 150px;
-  z-index: 10;
-  /* Ensures it appears above other elements */
-  padding: 0;
-}
-
-.profile-dropdown.hidden {
-  display: none;
-}
-
-.profile-dropdown li {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-.profile-dropdown li:last-child {
-  border-bottom: none;
-  /* Removes border from the last item */
-}
-
-.profile-dropdown li button {
-  width: 100%;
-  padding: 10px;
+.profile-button {
+  /* Styles for the profile button */
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
   border: none;
-  background: none;
-  text-align: left;
+  border-radius: 5px;
   cursor: pointer;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
 }
 
-.profile-dropdown li button:hover {
-  background-color: #f0f0f0;
-  /* Light gray background on hover */
+.profile-button:hover {
+  background-color: #0069d9;
 }
