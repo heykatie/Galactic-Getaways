@@ -23,25 +23,19 @@ const removeUser = () => {
 // thunk action creator to call backend API to log in, then set session user from response
 export const signup = (user) => async (dispatch) => {
 	const { username, firstName, lastName, email, password } = user;
-	try {
-		const response = await csrfFetch('/api/users', {
-			method: 'POST',
-			body: JSON.stringify({
-				username,
-				firstName,
-				lastName,
-				email,
-				password,
-			}),
-		});
-		const data = await response.json();
-		dispatch(setUser(data.user));
-		return response;
-	} catch (e) {
-		const errors = await e.json();
-		// console.log(errors);
-		return errors;
-	}
+	const response = await csrfFetch('/api/users', {
+		method: 'POST',
+		body: JSON.stringify({
+			username,
+			firstName,
+			lastName,
+			email,
+			password,
+		}),
+	});
+	const data = await response.json();
+	dispatch(setUser(data.user));
+	return response;
 };
 
 export const login = (user) => async (dispatch) => {
