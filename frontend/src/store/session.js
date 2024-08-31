@@ -40,6 +40,7 @@ export const signup = (user) => async (dispatch) => {
 	} catch (e) {
 		const errors = await e.json();
 		// console.log(errors);
+		return errors;
 	}
 };
 
