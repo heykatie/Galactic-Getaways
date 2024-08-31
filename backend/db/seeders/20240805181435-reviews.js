@@ -57,6 +57,7 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-    await Review.destroy({where: {}, truncate: true});
+    await Review.destroy({where: {}});
+    // await Review.destroy({where: {}, truncate: true});
   }
 };
