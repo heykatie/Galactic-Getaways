@@ -1,0 +1,41 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.navigation-list {
+  list-style: none;
+  display: flex;
+}
+
+.navigation-list li {
+  margin: 0 10px;
+}
+
+.navigation-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.navigation-link:hover {
+  text-decoration: underline;
+  color: #007bff;
+}
+
+.profile-button {
+  /* Styles for the profile button */
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile-button:hover {
+  background-color: #0069d9;
+}
