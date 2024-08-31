@@ -1,41 +1,47 @@
-import { useState, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
-import Navigation from './components/Navigation';
-import * as sessionActions from './store/session';
+import LoginFormPage from './components/LoginFormPage';
+// import Navigation from './components/Navigation';
 
-function Layout() {
-	const dispatch = useDispatch();
-	const [isLoaded, setIsLoaded] = useState(false);
-
-	useEffect(() => {
-		dispatch(sessionActions.restoreUser()).then(() => {
-			setIsLoaded(true);
-		});
-	}, [dispatch]);
-
-	return (
-		<>
-			<Navigation isLoaded={isLoaded} />
-			{isLoaded && <Outlet />}
-		</>
-	);
+const Layout = () => {
+  return (
+		<main>
+      {/* <Navigation /> */}
+      <Outlet />
+		</main>
+  );
 }
 
-const router = createBrowserRouter([
+const routes = [
 	{
 		element: <Layout />,
 		children: [
 			{
 				path: '/',
-				element: <h1>Welcome!</h1>,
-			},
+				children: [
+					{
+						index: true,
+						element: <h1> Welcome to BnB </h1>,
+          },
+          {
+            path: 'login',
+            element: <LoginFormPage/>
+          }
+				],
+      },
+      {
+        path: '*',
+        element: 'Page Not Found'
+      }
 		],
 	},
-]);
+];
+
+const router = createBrowserRouter(routes);
 
 function App() {
-	return <RouterProvider router={router} />;
+  return (
+    <RouterProvider router={router} />
+  )
 }
 
 export default App;
