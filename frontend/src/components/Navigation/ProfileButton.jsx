@@ -41,7 +41,7 @@ function ProfileButton({ user }) {
 	const ulClassName = 'profile-dropdown' + (showMenu ? '' : ' hidden');
 
 	return (
-		<>
+		<div className='user-menu'>
 			<button onClick={toggleMenu}>
 				<FaUserCircle />
 			</button>
@@ -63,6 +63,7 @@ function ProfileButton({ user }) {
 							itemText='Log In'
 							onItemClick={closeMenu}
 							modalComponent={<LoginFormModal />}
+							className='modal-item-text'
 						/>
 						<OpenModalMenuItem
 							itemText='Sign Up'
@@ -72,7 +73,7 @@ function ProfileButton({ user }) {
 					</>
 				)}
 			</ul>
-		</>
+		</div>
 	);
 }
 
