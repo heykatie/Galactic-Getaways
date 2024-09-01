@@ -15,10 +15,10 @@ function Layout() {
 	}, [dispatch]);
 
 	return (
-		<>
+		<main>
 			<Navigation isLoaded={isLoaded} />
 			{isLoaded && <Outlet />}
-		</>
+		</main>
 	);
 }
 
@@ -32,7 +32,11 @@ const router = createBrowserRouter([
 			},
 			{
 				path: '*',
-				element: <h1>No Page Found</h1>
+				element: <h1>Page Not Found</h1>
+			},
+			{
+				path: 'test',
+				element: <h1>Hallo beautiful hooman</h1>
 			}
 		],
 	},

@@ -1,0 +1,15 @@
+.login h1 {
+  text-align: center;
+}
+
+.login .input {
+  background-color: #b3e0dc;
+  padding: 5px;
+  margin: 3px;
+}
+
+.login button {
+  cursor: pointer;
+  padding: 5px;
+  background-color: #efab8b;
+}
