@@ -2,67 +2,71 @@
 
 const { Spot } = require('../models');
 const spots = [
-  {
-  address: "123 Main St",
-  city: "Seattle",
-  state: "WA",
-  country: "USA",
-  lat: 47.6097,
-  lng: -122.3331,
-  name: "Cozy Apartment in Downtown",
-  description: "A cozy apartment located in the heart of downtown Seattle. Close to all major attractions and public transportation.",
-  price: 150.00,
-  ownerId: 1
-},
-
-{
-  address: "456 Elm St",
-  city: "San Francisco",
-  state: "CA",
-  country: "USA",
-  lat: 37.7749,
-  lng: -122.4194,
-  name: "Beautiful Victorian Home",
-  description: "Experience the charm of San Francisco in this beautiful Victorian home with modern amenities.",
-  price: 250.00,
-  ownerId: 2
-},
-{
-  address: "789 Oak St",
-  city: "Portland",
-  state: "OR",
-  country: "USA",
-  lat: 45.5051,
-  lng: -122.6750,
-  name: "Modern Loft in Pearl District",
-  description: "A modern loft located in the trendy Pearl District. Perfect for business travelers and tourists.",
-  price: 200.00,
-  ownerId: 3
-},
-{
-  address: "101 Pine St",
-  city: "Austin",
-  state: "TX",
-  country: "USA",
-  lat: 30.2672,
-  lng: -97.7431,
-  name: "Spacious House with Pool",
-  description: "A spacious house with a private pool. Ideal for families and groups visiting Austin.",
-  price: 300.00,
-  ownerId: 1
-},
-{
-  address: "202 Maple St",
-  city: "New York",
-  state: "NY",
-  country: "USA",
-  lat: 40.7128,
-  lng: -74.0060,
-  name: "Luxury Condo in Manhattan",
-  description: "A luxury condo located in the heart of Manhattan. Enjoy stunning views and top-notch amenities.",
-  price: 400.00,
-  ownerId: 2
-}
+	{
+		address: '123 Galactic Federation Ave',
+		city: 'Earth C-137',
+		state: 'Multiverse',
+		country: 'Dimension C-137',
+		lat: 34.0522,
+		lng: -118.2437,
+		name: "Rick's Garage Hideaway",
+		description:
+			"A hidden gem located in Rick's infamous garage. Perfect for mad scientists and those seeking interdimensional adventures.",
+		price: 250.0,
+		ownerId: 1,
+	},
+	{
+		address: '301 Nimbus St',
+		city: 'New New York',
+		state: 'Earth',
+		country: 'Planet Express HQ',
+		lat: 40.7306,
+		lng: -73.9352,
+		name: 'Planet Express Office Suite',
+		description:
+			'Stay at the Planet Express headquarters! Enjoy unique views of the New New York skyline with occasional interplanetary deliveries.',
+		price: 300.0,
+		ownerId: 2,
+	},
+	{
+		address: '456 Citadel Blvd',
+		city: 'The Citadel',
+		state: 'Multiverse',
+		country: 'Interdimensional Hub',
+		lat: 35.6895,
+		lng: 139.6917,
+		name: 'Council of Ricks Penthouse',
+		description:
+			'A luxurious penthouse in the Citadel of Ricks. Enjoy top-tier security and easy access to multiverse portals.',
+		price: 500.0,
+		ownerId: 3,
+	},
+	{
+		address: '202 Slurm Factory Rd',
+		city: 'Wormulon',
+		state: 'Planet Slurm',
+		country: 'Slurmverse',
+		lat: -23.5505,
+		lng: -46.6333,
+		name: "Slurm Queen's Bungalow",
+		description:
+			'A lively accommodation near the Slurm Factory. Perfect for fans of the iconic beverage and intergalactic nightlife.',
+		price: 180.0,
+		ownerId: 1,
+	},
+	{
+		address: '789 Old Robot St',
+		city: 'Robot Hell',
+		state: 'New Jersey',
+		country: 'Earth',
+		lat: 40.7128,
+		lng: -74.006,
+		name: "The Devil's Dancefloor Suite",
+		description:
+			'Stay in the heart of Robot Hell, ideal for thrill-seekers and those who enjoy a good party... and a little bit of evil.',
+		price: 350.0,
+		ownerId: 2,
+	},
 ];
 
 /** @type {import('sequelize-cli').Migration} */
