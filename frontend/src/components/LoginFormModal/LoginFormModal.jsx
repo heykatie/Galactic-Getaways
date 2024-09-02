@@ -48,7 +48,12 @@ function LoginFormModal() {
 				<br></br>
 				{errors.credential && <p>{errors.credential}</p>}
 				<br></br>
-				<button type='submit'>Log In</button>
+				<button
+					type='submit'
+					disabled={credential.length < 4 || password.length < 6}
+				>
+					Log In
+				</button>
 			</form>
 		</div>
 	);
