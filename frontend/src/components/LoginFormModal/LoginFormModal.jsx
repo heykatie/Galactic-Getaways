@@ -24,9 +24,26 @@ function LoginFormModal() {
 			});
 	};
 
+	const demoLogin = (e) => {
+		e.stopPropagation();
+		const demoCredential = 'DemoUser';
+		const demoPassword = 'password4';
+		return dispatch(
+			sessionActions.login({ credential: demoCredential, password: demoPassword })
+		)
+		.then(closeModal)
+		.catch(async (res) => {
+			const data = await res.json();
+			if (data && data.message) {
+				setErrors(data);
+			}
+		});
+	};
+
 	return (
 		<div className='login'>
 			<h1>Log In</h1>
+			{errors.message && <p>{errors.message}</p>}
 			<form onSubmit={handleSubmit}>
 				<input
 					className='input'
@@ -46,7 +63,6 @@ function LoginFormModal() {
 					required
 				/>
 				<br></br>
-				{errors.message && <p>{errors.message}</p>}
 				<br></br>
 				<button
 					type='submit'
@@ -54,7 +70,10 @@ function LoginFormModal() {
 					Log In
 				</button>
 			</form>
-			<link to='/'>Log in as Demo User</link>
+			<br></br>
+			<a href='#' onClick={demoLogin} id='demo-login' className='demo-link'>
+				Log in as Demo User
+			</a>
 		</div>
 	);
 }
