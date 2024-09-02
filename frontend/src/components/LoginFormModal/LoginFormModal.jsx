@@ -18,8 +18,8 @@ function LoginFormModal() {
 			.then(closeModal)
 			.catch(async (res) => {
 				const data = await res.json();
-				if (data && data.errors) {
-					setErrors(data.errors);
+				if (data?.message) {
+					setErrors({ message: 'The provided credentials were invalid' });
 				}
 			});
 	};
@@ -46,15 +46,15 @@ function LoginFormModal() {
 					required
 				/>
 				<br></br>
-				{errors.credential && <p>{errors.credential}</p>}
+				{errors.message && <p>{errors.message}</p>}
 				<br></br>
 				<button
 					type='submit'
-					disabled={credential.length < 4 || password.length < 6}
-				>
+					disabled={credential.length < 4 || password.length < 6}>
 					Log In
 				</button>
 			</form>
+			<link to='/'>Log in as Demo User</link>
 		</div>
 	);
 }
