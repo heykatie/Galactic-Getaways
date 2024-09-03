@@ -90,20 +90,21 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
+  width: 100%;
 }
 
 #price {
   font-size: 1.2rem;
   font-weight: bold;
   color: teal;
+  flex-grow: 1;
+  text-align: left;
 }
 
 #rating-reviews {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-  max-width: 100%;
+  flex-shrink: 0;
+  margin-left: auto;
+  text-align: right;
 }
 
 #rating {
