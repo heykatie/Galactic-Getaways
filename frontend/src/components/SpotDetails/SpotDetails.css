@@ -74,9 +74,9 @@
 
 #spot-info {
   flex: 2;
-  padding: 20px;
+  padding: 20px 20px 0px 8px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 .5px .5px rgba(0, 0, 0, 0.1); */
   background-color: #fff;
 }
 
@@ -156,6 +156,11 @@
 
 #reserve:hover {
   background-color: #2980b9;
+}
+
+.reviews {
+  width: 1100px;
+  border-top: 1px solid #ddd;
 }
 
 /* Responsive adjustments */
