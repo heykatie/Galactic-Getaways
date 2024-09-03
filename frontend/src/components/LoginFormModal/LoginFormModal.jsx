@@ -26,7 +26,7 @@ function LoginFormModal() {
 
 	const demoLogin = (e) => {
 		e.stopPropagation();
-		const demoCredential = 'DemoUser';
+		const demoCredential = 'cutie@demo.io';
 		const demoPassword = 'password4';
 		return dispatch(
 			sessionActions.login({ credential: demoCredential, password: demoPassword })
