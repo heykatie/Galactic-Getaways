@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import * as sessionActions from './store/session';
 import Spots from './components/Spots';
+import SpotDetails from './components/SpotDetails';
 
 function Layout() {
 	const dispatch = useDispatch();
@@ -32,13 +33,21 @@ const router = createBrowserRouter([
 				element: <Spots />,
 			},
 			{
-				path: '*',
-				element: <h1>Page Not Found</h1>
+				path: '/spots',
+				element: <Spots />,
+			},
+			{
+				path: '/spots/:id',
+				element: <SpotDetails />,
 			},
 			{
 				path: 'test',
-				element: <h1>Hallo beautiful hooman</h1>
-			}
+				element: <h1>Hallo beautiful hooman</h1>,
+			},
+			{
+				path: '*',
+				element: <h1>Page Not Found</h1>,
+			},
 		],
 	},
 ]);

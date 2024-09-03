@@ -6,8 +6,8 @@ import SpotTile from './SpotTiles';
 
 export default function Spots() {
 	const dispatch = useDispatch();
-	const data = useSelector((state) => state.spots);
-	let spots = Object.values(data);
+	const spots = useSelector((state) => state.spots);
+	let spotsArr = Object.values(spots);
 
 	useEffect(() => {
 		dispatch(getAllSpots());
@@ -18,7 +18,7 @@ export default function Spots() {
 			<h1>Welcome to Galactic Getaways!</h1>
 
 			<div className='spots-grid'>
-				{spots?.map((spot) => (
+				{spotsArr?.map((spot) => (
 					<SpotTile key={`${spot.id}`} spot={spot} />
 				))}
 			</div>
