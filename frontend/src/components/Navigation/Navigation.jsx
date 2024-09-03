@@ -21,6 +21,7 @@ function Navigation({ isLoaded }) {
 					</li>
 				)}
 			</ul>
+			{/* <hr className='nav-hr' /> */}
 		</div>
 	);
 }
