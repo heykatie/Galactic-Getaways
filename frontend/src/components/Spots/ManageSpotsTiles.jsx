@@ -3,6 +3,7 @@ import { GiAlienFire } from 'react-icons/gi';
 import { GiAlienEgg } from 'react-icons/gi';
 import { useSelector } from 'react-redux';
 import OpenModalButton from '../OpenModalButton';
+import DeleteModal from '../DeleteModal';
 
 export default function ManageSpotsTiles(props) {
 	const { spot, loggedIn } = props;
@@ -67,11 +68,10 @@ export default function ManageSpotsTiles(props) {
 								Update
 							</button>
 							<OpenModalButton
-								className='update-delete'
-								// modalComponent={
-								// 	<DeleteModal spotId={spotId} deleteType={'Spot'} />
-								// }
 								buttonText={'Delete'}
+								modalComponent={
+									<DeleteModal spotId={spot.id} type='spot' />
+								}
 							/>
 						</div>
 					)}

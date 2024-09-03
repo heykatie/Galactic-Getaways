@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import OpenModalButton from '../OpenModalButton';
-// import DeleteModal from '../DeleteModal';
+import DeleteModal from '../DeleteModal';
 
 const MONTHS = [
 	'Jan',
@@ -32,10 +32,10 @@ export default function ReviewTile({ review }) {
 			<p className='review-text'>{review.review}</p>
 			{session.user?.id === review.User.id && (
 				<OpenModalButton
-					// modalComponent={
-					// 	<DeleteModal reviewId={review.id} deleteType={'Review'} />
-					// }
 					buttonText={'Delete'}
+					modalComponent={
+						<DeleteModal reviewId={review.id} type='review' />
+					}
 				/>
 			)}
 		</div>
