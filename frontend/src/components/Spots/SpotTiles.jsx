@@ -1,13 +1,9 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { GiAlienFire } from 'react-icons/gi';
 import { GiAlienEgg } from 'react-icons/gi';
-import OpenModalButton from '../OpenModalButton';
 
 export default function SpotTile(props) {
-	const { spot, loggedIn } = props;
-	const navigate = useNavigate();
-
-	const handleClick = () => navigate(`/spots/${spot.id}/edit`);
+	const { spot } = props;
 
 	return (
 		<Link to={`/spots/${spot.id}`} className='tiles'>
