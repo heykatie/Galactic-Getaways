@@ -1,12 +1,10 @@
-/* Container for the entire page */
+
 .spot-container {
   max-width: 1100px;
   margin: 0 auto;
-  /* Center the container horizontally */
   padding: 20px;
 }
 
-/* Spot Title */
 #spot-title {
   padding: 20px;
   text-align: left;
@@ -25,11 +23,9 @@
   color: #666;
 }
 
-/* Images Section */
 #spot-images {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  /* Preview image takes up more space */
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -42,7 +38,6 @@
 #preview {
   width: 100%;
   height: auto;
-  /* Maintain aspect ratio */
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -51,9 +46,7 @@
 #image-tiles {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* Two columns */
   grid-template-rows: 1fr 1fr;
-  /* Two rows */
   gap: 10px;
 }
 
@@ -65,7 +58,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Spot Details Section */
 .spot-details {
   display: flex;
   justify-content: space-between;
@@ -76,7 +68,6 @@
   flex: 2;
   padding: 20px 20px 0px 8px;
   border-radius: 8px;
-  /* box-shadow: 0 .5px .5px rgba(0, 0, 0, 0.1); */
   background-color: #fff;
 }
 
@@ -88,13 +79,10 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  /* Reduced padding */
   background-color: #fff;
   max-width: 100%;
   min-width: 200px;
-  /* Ensure it's not too narrow */
   height: fit-content;
-  /* Adjust height to content */
 }
 
 #callout-top {
@@ -102,12 +90,10 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
-  /* Reduced margin */
 }
 
 #price {
   font-size: 1.2rem;
-  /* Reduced font size */
   font-weight: bold;
   color: teal;
 }
@@ -117,18 +103,15 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  /* Reduced margin */
 }
 
 #rating {
   font-size: 1rem;
-  /* Reduced font size */
   color: #6a0dad;
 }
 
 #reviews {
   font-size: 0.9rem;
-  /* Reduced font size */
 }
 
 #reserve-button {
@@ -143,15 +126,11 @@
   border: none;
   border-radius: 4px;
   padding: 12px 24px;
-  /* Increase padding for a wider button */
   font-size: 1rem;
-  /* Adjust font size if needed */
   cursor: pointer;
   transition: background-color 0.3s ease;
   width: 100%;
-  /* Make button take up the full width of its container */
   max-width: 300px;
-  /* Optional: Set a maximum width */
 }
 
 #reserve:hover {
@@ -163,7 +142,6 @@
   border-top: 1px solid #ddd;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   #spot-images {
     grid-template-columns: 1fr;
