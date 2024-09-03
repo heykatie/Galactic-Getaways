@@ -31,13 +31,13 @@ export default function Reviews({ spot }) {
 			</div>
 			<div>
 				{session.user &&
-					session.user?.id !== ownerId &&
-					!reviews?.length && <p>Be the first to post a review!</p>}
+					session.user.id !== ownerId &&
+					!reviews.length && <p>Be the first to post a review!</p>}
 			</div>
 			<div>
 				{session.user &&
-					session.user?.id !== ownerId &&
-					!reviews?.some(
+					session.user.id !== ownerId &&
+					!reviews.some(
 						(review) => review?.userId === session.user?.id
 					) && (
 						<OpenModalButton
