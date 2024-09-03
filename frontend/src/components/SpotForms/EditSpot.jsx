@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getSpotById, makeSpot, editSpot } from '../../store/spots';
+import './SpotForms.css';
 
-export default function SpotForm({ newSpot }) {
+export default function EditSpot() {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
 	const { id } = useParams();
@@ -30,23 +31,6 @@ export default function SpotForm({ newSpot }) {
 		const { name, value } = e.target;
 		setFormData((prevData) => ({ ...prevData, [name]: value }));
 	};
-
-	useEffect(() => {
-		if (newSpot) {
-			setFormData({
-				country: '',
-				address: '',
-				city: '',
-				state: '',
-				lat: '',
-				lng: '',
-				description: '',
-				name: '',
-				price: 0,
-				prevImage: '',
-			});
-		}
-	}, [newSpot]);
 
 	useEffect(() => {
 		if (spot) {
@@ -79,7 +63,7 @@ export default function SpotForm({ newSpot }) {
 			errors.description = 'Description must be less than 1000 characters';
 		if (formData.name.trim() === '') errors.name = 'Name is required';
 		if (formData.price < 0.01) errors.price = 'Price must be greater than $0';
-    if (formData.images.length > 0) {
+		if (formData.images.length > 0) {
 			formData.images.forEach((image, idx) => {
 				if (image && !/\.(jpg|jpeg|png)$/.test(image)) {
 					valErrors[`image${idx}`] =
@@ -89,7 +73,7 @@ export default function SpotForm({ newSpot }) {
 		}
 
 		setValErrors(errors);
-	}, [formData, newSpot, valErrors]);
+	}, [formData, valErrors]);
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -112,12 +96,14 @@ export default function SpotForm({ newSpot }) {
 			<form
 				className='new-spot-form'
 				style={{ display: 'flex', flexDirection: 'column', width: 525 }}>
-				{newSpot ? <h1>Create a new Spot</h1> : <h1>Update your Spot</h1>}
-				<h2>Where&apos;s your place located? </h2>
-				<p>
+				<h1>Update your Spot</h1>
+				<h2>Where&apos;s your place located?</h2>
+				<caption style={{ textAlign: 'left' }}>
 					Guests will only get your exact address once they booked a
 					reservation.
-				</p>
+				</caption>
+				<br></br>
+				<br></br>
 				<div>
 					<label htmlFor='country'>Country</label>
 					{submitted && valErrors.country && (
@@ -154,7 +140,7 @@ export default function SpotForm({ newSpot }) {
 						</div>
 						<input
 							value={formData.city}
-					onChange={handleChange}
+							onChange={handleChange}
 							placeholder='City'
 							type='text'
 							name='city'
@@ -169,14 +155,14 @@ export default function SpotForm({ newSpot }) {
 						</div>
 						<input
 							value={formData.state}
-					onChange={handleChange}
+							onChange={handleChange}
 							placeholder='State'
 							type='text'
 							name='state'
 						/>
 					</div>
 				</div>
-				<div className='lat-lng-container'>
+				<div className='coord-container'>
 					<div>
 						<div>
 							<label htmlFor='latitude'>Latitude</label>
@@ -187,7 +173,8 @@ export default function SpotForm({ newSpot }) {
 						<input
 							className='lat-lng'
 							value={formData.lat}
-					onChange={handleChange}
+							onChange={handleChange}
+							placeholder='Latitude'
 							type='number'
 							name='latitude'
 						/>
@@ -202,18 +189,20 @@ export default function SpotForm({ newSpot }) {
 						<input
 							className='lat-lng'
 							value={formData.lng}
-					onChange={handleChange}
+							onChange={handleChange}
+							placeholder='Longitude'
 							type='number'
 							name='longitude'
 						/>
 					</div>
 				</div>
 				<h3>Describe your place to guests</h3>
-				<p>
+				<caption style={{ textAlign: 'left' }}>
 					Mention the best features of your space, any special amenities
 					like fast wifi or parking, and what you love about the
 					neighborhood.
-				</p>
+				</caption>
+				<br></br>
 				<textarea
 					value={formData.description}
 					onChange={handleChange}
@@ -226,10 +215,11 @@ export default function SpotForm({ newSpot }) {
 					<div className='hide'>Validated</div>
 				)}
 				<h3>Create a title for your spot</h3>
-				<p>
+				<caption style={{ textAlign: 'left' }}>
 					Catch guests&apos; attention with a spot title that highlights
 					what makes your place special.
-				</p>
+				</caption>
+				<br></br>
 				<input
 					value={formData.name}
 					onChange={handleChange}
@@ -243,16 +233,17 @@ export default function SpotForm({ newSpot }) {
 					<div className='hide'>Validated</div>
 				)}
 				<h3>Set a base price for your spot</h3>
-				<p>
+				<caption style={{ textAlign: 'left' }}>
 					Competitive pricing can help your listing stand out and rank
 					higher in search results.
-				</p>
+				</caption>
+				<br></br>
 				<label>
 					$
 					<input
 						className='price-input'
 						value={formData.price}
-					onChange={handleChange}
+						onChange={handleChange}
 						type='number'
 						name='price'
 						placeholder='Price per night (USD)'
@@ -264,16 +255,16 @@ export default function SpotForm({ newSpot }) {
 					<div className='hide'>Validated</div>
 				)}
 				<h3>Liven up your spot with photos</h3>
-				<p>Submit a link to at least one photo to publish your spot</p>
+				<caption style={{ textAlign: 'left' }}>
+					Submit a link to at least one photo to publish your spot
+				</caption>
+				<br></br>
 				<input
-					disabled={!newSpot}
 					value={formData.prevImage}
 					onChange={handleChange}
 					type='text'
 					name='preview'
-					placeholder={
-						newSpot ? 'Preview Image URL' : 'Feature Coming Soon'
-					}
+					placeholder='Preview Image URL'
 				/>
 				{submitted && valErrors.prevImage ? (
 					<div className='errors'>{valErrors.prevImage}</div>
@@ -301,9 +292,7 @@ export default function SpotForm({ newSpot }) {
 					disabled={true}
 				/>
 				{<div className='hide'>Validated</div>}
-				<button onClick={newSpot ? handleSubmit : handleUpdate}>
-					{newSpot ? 'Create Spot' : 'Update Spot'}
-				</button>
+				<button onClick={handleUpdate}>Update Spot</button>
 			</form>
 		</div>
 	);
