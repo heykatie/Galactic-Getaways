@@ -1,8 +1,8 @@
-// import './Spots.css';
+import './Spots.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { getAllSpots } from '../../store/spots';
-import SpotCard from './SpotCard';
+import SpotTile from './SpotTiles';
 
 export default function Spots() {
 	const dispatch = useDispatch();
@@ -17,10 +17,10 @@ export default function Spots() {
 		<div className='spots-page'>
 			<h1>Welcome to Galactic Getaways!</h1>
 
-			<div className='spots-tiles'>
+			<div className='spots-grid'>
 				{spots?.map((spot) => (
-        <SpotCard key={`${spot.id}`} spot={spot} spotId={spot.id}/>
-        ))}
+					<SpotTile key={`${spot.id}`} spot={spot} />
+				))}
 			</div>
 		</div>
 	);
