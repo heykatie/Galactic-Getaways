@@ -27,8 +27,13 @@ export default function SpotDetails() {
   if (!spot) return <h1>No longer available.</h1>;
   if (!images) return <h1>Loading...</h1>;
 
+  const reserve = (e) => {
+    e.preventDefault();
+    alert('Feature coming soon...');
+  }
+
   return (
-		<div>
+		<div className='spot-container'>
 			<div id='spot-title'>
 				<h1>{spot.name}</h1>
 				<h3>
@@ -62,27 +67,44 @@ export default function SpotDetails() {
 					<p>{spot.description}</p>
 				</div>
 				<div id='callout'>
-					<div id='price'>
-						{spot.price}
-						<GiAlienEgg
-							style={{
-								color: 'teal',
-								fontSize: '1rem',
-							}}
-						/>{' '}
-						/night
-					</div>
-					{spot.avgStarRating && (
-						<div id='rating'>
-							Rating: {spot.avgStarRating.toFixed(2)}
-							<GiAlienFire
+					<div id='callout-top'>
+						<div id='price'>
+							{spot.price}
+							<GiAlienEgg
 								style={{
-									color: '#6a0dad',
+									color: 'teal',
 									fontSize: '1rem',
 								}}
-							/>
+							/>{' '}
+							/night
 						</div>
-					)}
+						<div id='rating-reviews'>
+							{spot.avgStarRating && (
+								<span id='rating'>
+									{spot.avgStarRating.toFixed(2)}
+									<GiAlienFire
+										style={{
+											color: '#6a0dad',
+											fontSize: '1rem',
+										}}
+									/>
+									&nbsp;
+								</span>
+							)}
+							<span id='reviews'>
+								{spot?.numReviews
+									? spot?.numReviews === 1
+										? ` • ${spot?.numReviews} review`
+										: ` • ${spot?.numReviews} reviews`
+									: '*New*'}
+							</span>
+						</div>
+					</div>
+					<div id='reserve-button'>
+						<button id='reserve' onClick={reserve}>
+							Reserve
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>

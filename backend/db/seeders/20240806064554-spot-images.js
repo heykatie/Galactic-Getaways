@@ -10,6 +10,26 @@ const spotImages = [
 		preview: true,
 	},
 	{
+		spotId: 1,
+		url: 'https://i.pinimg.com/originals/2d/51/b0/2d51b07e3c4fa89d77618cec4c95ff48.jpg',
+		preview: false,
+	},
+	{
+		spotId: 1,
+		url: 'https://i.pinimg.com/originals/ba/47/b1/ba47b19b128115fb8dbf5bfad1001eed.jpg',
+		preview: false,
+	},
+	{
+		spotId: 1,
+		url: 'https://as2.ftcdn.net/v2/jpg/06/01/92/07/1000_F_601920739_QgHMXRKV12O32sgKasgK8ImPRhUJ3NCm.jpg',
+		preview: false,
+	},
+	{
+		spotId: 1,
+		url: 'https://as2.ftcdn.net/v2/jpg/04/71/86/77/1000_F_471867739_bRFlSA9iKzrgwleCKVZDKqZBiN5JX8ue.jpg',
+		preview: false,
+	},
+	{
 		spotId: 2,
 		url: 'https://hips.hearstapps.com/hmg-prod/images/edc100123egan-002-6500742f5feb7.jpg?crop=0.688xw:1.00xh;0.157xw,0&resize=980:*', // Planet Express HQ
 		preview: true,
