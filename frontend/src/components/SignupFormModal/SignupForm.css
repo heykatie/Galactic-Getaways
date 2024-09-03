@@ -5,11 +5,15 @@
 .signup .input {
   background-color: #b3e0dc;
   padding: 5px;
-  margin: 3px;
+  margin: 15px;
+  padding: 10px;
 }
 
 .signup button {
   cursor: pointer;
   padding: 5px;
   background-color: #efab8b;
+  width: 100%;
+  display: block;
+  margin: 10px 0;
 }

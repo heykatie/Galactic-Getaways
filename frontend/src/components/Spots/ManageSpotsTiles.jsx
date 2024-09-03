@@ -12,6 +12,7 @@ export default function ManageSpotsTiles(props) {
 
   const handleClick = (e) => {
     e.preventDefault();
+		e.stopPropagation();
     navigate(`/spots/${spot.id}/edit`);
   };
 

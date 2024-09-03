@@ -9,10 +9,14 @@ export default function DeleteModal({ spotId, reviewId, type }) {
 	const { closeModal } = useModal();
 
 
-	const handleYes = () => {
-    if (type == 'spot') {
+	const handleYes = (e) => {
+		if (type == 'spot') {
+			e.preventDefault();
+			e.stopPropagation();
       dispatch(destroySpot(spotId));
 		} else {
+			e.preventDefault();
+			e.stopPropagation();
       dispatch(destroyReview(reviewId));
 		}
 		closeModal();

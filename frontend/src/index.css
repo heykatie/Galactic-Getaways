@@ -32,6 +32,9 @@ button {
   font-size: 1rem;
   text-align: center;
   cursor: pointer;
+  background-color: rgb(240, 185, 83);
+  border-radius: 8px;
+  margin: 5px;
 }
 
 button.normal {
