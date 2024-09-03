@@ -1,3 +1,9 @@
+.nav {
+  max-width: fill;
+  margin: 0 auto;
+
+}
+
 ul.navbar {
   display: flex;
   flex-direction: row;
