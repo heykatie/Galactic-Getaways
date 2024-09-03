@@ -45,7 +45,7 @@ module.exports = {
 					username: 'Beautiful-Hooman',
 					firstName: 'Beautiful',
 					lastName: 'Hooman',
-					hashedPassword: bcrypt.hashSync('password4'),
+					hashedPassword: bcrypt.hashSync('password5'),
 				},
 			],
 			{ validate: true }
