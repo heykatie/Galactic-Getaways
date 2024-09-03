@@ -4,6 +4,7 @@ import OpenModalButton from '../OpenModalButton';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllReviews } from '../../store/reviews';
+import ReviewModal from '../ReviewModal';
 import './Reviews.css';
 
 
@@ -30,9 +31,9 @@ export default function Reviews({ spot }) {
 				<RatingReview spot={spot} />
 			</div>
 			<div>
-				{session.user &&
-					session.user.id !== ownerId &&
-					!reviews.length && <p>Be the first to post a review!</p>}
+				{session.user && session.user.id !== ownerId && !reviews.length && (
+					<p>Be the first to post a review!</p>
+				)}
 			</div>
 			<div>
 				{session.user &&
@@ -41,13 +42,12 @@ export default function Reviews({ spot }) {
 						(review) => review?.userId === session.user?.id
 					) && (
 						<OpenModalButton
-							className='post-review-button'
-							// modalComponent={
-							// 	<ReviewFormModal
-							// 		spotId={spot.id}
-							// 		setNewReview={setNewReview}
-							// 	/>
-							// }
+							className='new-review'
+							modalComponent={
+								<ReviewModal
+									spotId={spot.id}
+								/>
+							}
 							buttonText={'Post Your Review'}
 						/>
 					)}

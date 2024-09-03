@@ -16,8 +16,6 @@ export default function SpotDetails() {
 
   const images = spot?.SpotImages?.filter((image) => image.preview === false);
 
-  // const reviews = useSelector(state => state.reviews)
-
   useEffect(() => {
     dispatch(getSpotById(id));
   }, [dispatch, id]);
