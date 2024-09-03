@@ -80,6 +80,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .location {
@@ -97,9 +98,13 @@
 
 .price {
   font-size: 16px;
-  font-weight: bold;
   text-align: left;
   padding-left: 2px;
+  display: flex;
+}
+
+.price #price {
+  font-weight: bold;
 }
 
 a {
