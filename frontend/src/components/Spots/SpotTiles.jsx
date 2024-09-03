@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { GiAlienFire } from 'react-icons/gi';
+import { GiAlienEgg } from 'react-icons/gi';
 
 export default function SpotTile(props) {
 	const { spot } = props;
@@ -26,13 +27,22 @@ export default function SpotTile(props) {
 						<GiAlienFire
 							style={{
 								color: '#6a0dad',
-								fontSize: '.9rem',
-							}}></GiAlienFire>
+								fontSize: '1rem',
+							}}
+						/>
 					</div>
 				</div>
 				<div className='price'>
-					<span id='price'>${spot.price}</span>
-					<span id='night'>/night</span>
+					<span id='price'>
+						{spot.price}
+						<GiAlienEgg
+							style={{
+								color: 'teal',
+								fontSize: '1rem',
+							}}
+						/>
+					</span>
+					<span id='night'>&nbsp;/night</span>
 				</div>
 			</div>
 		</Link>
