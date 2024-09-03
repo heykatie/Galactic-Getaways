@@ -59,8 +59,8 @@ export default function ManageSpotsTiles(props) {
 									fontSize: '1rem',
 								}}
 							/>
+						/night
 						</span>
-						<span id='night'>&nbsp;/night</span>
 					</div>
 					{loggedIn && (
 						<div className='button-box'>

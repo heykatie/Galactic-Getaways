@@ -47,8 +47,8 @@ export default function SpotTile(props) {
 								fontSize: '1rem',
 							}}
 						/>
+						/night
 					</span>
-					<span id='night'>&nbsp;/night</span>
 				</div>
 			</div>
 		</Link>

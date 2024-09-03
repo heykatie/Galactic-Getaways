@@ -72,8 +72,7 @@ export default function SpotDetails() {
 										color: 'teal',
 										fontSize: '1rem',
 									}}
-								/>{' '}
-								/night
+								/>/night
 							</div>
 							<div id='rating-reviews'>
 								<RatingReview spot={spot} />

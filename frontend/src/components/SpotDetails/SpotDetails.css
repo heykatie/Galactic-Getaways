@@ -87,14 +87,13 @@
 
 #callout-top {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
   width: 100%;
 }
 
 #price {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   color: teal;
   flex-grow: 1;
