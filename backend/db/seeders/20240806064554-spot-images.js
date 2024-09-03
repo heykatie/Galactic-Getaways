@@ -15,6 +15,26 @@ const spotImages = [
 		preview: true,
 	},
 	{
+		spotId: 2,
+		url: 'https://www.willsill.co.uk/wp-content/uploads/2022/01/Cool-office-1.jpg', // Planet Express HQ
+		preview: false,
+	},
+	{
+		spotId: 2,
+		url: 'https://assets-blog.s3.amazonaws.com/office-furniture-blog/wp-content/uploads/2021/04/08004227/interior-4406045_1280-1080x540.jpeg', // Planet Express HQ
+		preview: false,
+	},
+	{
+		spotId: 2,
+		url: 'https://assets.hongkiat.com/uploads/creative_modern_office_design/Google_Zurich_creative_office2.jpg', // Planet Express HQ
+		preview: false,
+	},
+	{
+		spotId: 2,
+		url: 'https://assets.entrepreneur.com/content/3x2/2000/20160421183052-google-slides-tel-aviv.jpeg?format=pjeg&auto=webp&crop=16:9&width=675&height=380', // Planet Express HQ
+		preview: false,
+	},
+	{
 		spotId: 3,
 		url: 'https://www.the-sun.com/wp-content/uploads/sites/6/2022/07/NINTCHDBPICT000750103510.jpg?strip=all&w=960', // The Citadel
 		preview: true,
