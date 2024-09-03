@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { FaUserCircle } from 'react-icons/fa';
 import * as sessionActions from '../../store/session';
@@ -52,6 +52,9 @@ function ProfileButton({ user }) {
 						{/* <li>{user.username} {user.lastName}</li> */}
 						<li>Hello, {user.firstName}</li>
 						<li>{user.email}</li>
+						<li id='manage-spots'>
+							<NavLink to='/spots/manage'>Manage Spots</NavLink>
+						</li>
 						<li>
 							<button onClick={logout}>Log Out</button>
 						</li>

@@ -1,9 +1,15 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { GiAlienFire } from 'react-icons/gi';
 import { GiAlienEgg } from 'react-icons/gi';
+import { useSelector } from 'react-redux';
+import OpenModalButton from '../OpenModalButton';
 
 export default function SpotTile(props) {
-	const { spot } = props;
+	const { spot, loggedIn } = props;
+	const session = useSelector((state) => state.session);
+	const navigate = useNavigate();
+
+	const handleClick = () => navigate(`/spots/${spot.id}/edit`);
 
 	return (
 		<Link to={`/spots/${spot.id}`} className='tiles'>
@@ -50,6 +56,20 @@ export default function SpotTile(props) {
 					</span>
 					<span id='night'>&nbsp;/night</span>
 				</div>
+				{loggedIn && (
+					<div className='button-box'>
+						<button className='update' onClick={handleClick}>
+							Update
+						</button>
+						<OpenModalButton
+							className='update-delete'
+							// modalComponent={
+							// 	<DeleteModal spotId={spotId} deleteType={'Spot'} />
+							// }
+							buttonText={'Delete'}
+						/>
+					</div>
+				)}
 			</div>
 		</Link>
 	);
