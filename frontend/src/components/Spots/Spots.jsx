@@ -15,8 +15,6 @@ export default function Spots() {
 
 	return (
 		<div className='spots-page'>
-			<h1>Welcome to Galactic Getaways!</h1>
-
 			<div className='spots-grid'>
 				{spotsArr?.map((spot) => (
 					<SpotTile key={`${spot.id}`} spot={spot} />

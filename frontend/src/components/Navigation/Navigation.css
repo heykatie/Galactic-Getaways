@@ -1,7 +1,11 @@
 .nav {
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
   max-width: fill;
   margin: 0 auto;
-
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
 }
 
 ul.navbar {
@@ -11,17 +15,25 @@ ul.navbar {
   align-items: center;
   padding-bottom: 6px;
   margin-top: 2px;
-  border-bottom: 1px solid lightgrey;
+  /* border-bottom: 1px solid lightgrey; */
+  margin: 0;
+  padding: 0;
 }
 
-img#logo {
+#logo img {
   height: 2.5rem;
-  /* margin-right: 1.25rem; */
   margin-top: 5px;
+  margin-right: 10px;
 }
 
-li#user-button{
-  margin-right: 2rem;
+#name img {
+  height: 2.5rem;
+  margin-left: 10px;
+}
+
+#user-button {
+  margin-left: auto;
+  /* Push user button to the far right */
 }
 
 .hidden {

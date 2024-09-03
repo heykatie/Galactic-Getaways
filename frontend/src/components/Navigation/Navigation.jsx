@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
 import logo from '../../../../images/logo.png';
+import name from '../../../../images/name.jpeg';
 
 function Navigation({ isLoaded }) {
 	const sessionUser = useSelector((state) => state.session.user);
@@ -12,7 +13,12 @@ function Navigation({ isLoaded }) {
 			<ul className='navbar'>
 				<li id='logo'>
 					<NavLink to='/'>
-						<img src={logo} alt='Logo' id='logo' />
+						<img src={logo} alt='logo' id='logo' />
+					</NavLink>
+				</li>
+				<li id='name'>
+					<NavLink to='/'>
+						<img src={name} alt='name' id='name' />
 					</NavLink>
 				</li>
 				{isLoaded && (
