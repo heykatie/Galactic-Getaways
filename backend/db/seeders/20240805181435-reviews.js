@@ -13,7 +13,7 @@ const reviews = [
 	},
 	{
 		userId: 2,
-		spotId: 2,
+		spotId: 1,
 		review:
 			"Unique spot, but too chaotic for my taste. Rick's experiments were a bit too much.",
 		stars: 3.5,
