@@ -11,23 +11,30 @@ function Navigation({ isLoaded }) {
 	return (
 		<div className='nav'>
 			<ul className='navbar'>
-				<li id='logo'>
+				<li id='logo-name'>
 					<NavLink to='/'>
-						<img src={logo} alt='logo' id='logo' />
+						<img src={logo} alt='logo' />
+					</NavLink>
+					<NavLink to='/'>
+						<img src={name} alt='name' />
 					</NavLink>
 				</li>
-				<li id='name'>
-					<NavLink to='/'>
-						<img src={name} alt='name' id='name' />
-					</NavLink>
-				</li>
+
 				{isLoaded && (
-					<li id='user-button'>
-						<ProfileButton user={sessionUser} />
-					</li>
+					<div id='right-nav'>
+						{sessionUser && (
+							<li>
+								<NavLink id='create-spot' to='/spots/new'>
+									Create a New Spot
+								</NavLink>
+							</li>
+						)}
+						<li id='user-button'>
+							<ProfileButton user={sessionUser} />
+						</li>
+					</div>
 				)}
 			</ul>
-			{/* <hr className='nav-hr' /> */}
 		</div>
 	);
 }
