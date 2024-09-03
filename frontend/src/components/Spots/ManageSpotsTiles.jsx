@@ -9,7 +9,10 @@ export default function ManageSpotsTiles(props) {
 	const session = useSelector((state) => state.session);
 	const navigate = useNavigate();
 
-	const handleClick = () => navigate(`/spots/${spot.id}/edit`);
+  const handleClick = (e) => {
+    e.preventDefault();
+    navigate(`/spots/${spot.id}/edit`);
+  };
 
 	return (
 		loggedIn &&

@@ -54,17 +54,6 @@ export default function SpotTile(props) {
 					</span>
 					<span id='night'>&nbsp;/night</span>
 				</div>
-				{loggedIn && (
-					<div className='button-box'>
-						<button className='update' onClick={handleClick}>
-							Update
-						</button>
-						<OpenModalButton
-							className='update-delete'
-							buttonText={'Delete'}
-						/>
-					</div>
-				)}
 			</div>
 		</Link>
 	);
