@@ -8,49 +8,56 @@ const reviews = [
 		userId: 1,
 		spotId: 1,
 		review:
-			'Absolutely loved the garage hideaway! Felt like I was on an interdimensional adventure.',
+			"The atmosphere at Rick's Garage Hideaway is definitely unique, but it was a bit too chaotic for me. Rick's experiments were intriguing, but they added a level of unpredictability that wasn't to my taste.",
 		stars: 4.8,
 	},
 	{
-		userId: 2,
+		userId: 4,
 		spotId: 1,
 		review:
-			"Unique spot, but too chaotic for my taste. Rick's experiments were a bit too much.",
+			"The atmosphere at Rick's Garage Hideaway is definitely unique, but it was a bit too chaotic for me. Rick's experiments were intriguing, but they added a level of unpredictability that wasn't to my taste.",
+		stars: 3.9,
+	},
+	{
+		userId: 2,
+		spotId: 2,
+		review:
+			'Staying at the Planet Express Office Suite was fantastic! The panoramic views of New New York were incredible, and being close to the interplanetary operations added an exciting twist to the stay.',
 		stars: 3.5,
 	},
 	{
 		userId: 3,
-		spotId: 3,
+		spotId: 2,
 		review:
-			'Fantastic views of New New York! The experience was unforgettable.',
+			'I enjoyed my stay at the Planet Express Office Suite, but the occasional interplanetary delivery missions were a bit distracting. The views and location were great, though.',
 		stars: 4.9,
 	},
 	{
 		userId: 4,
 		spotId: 4,
 		review:
-			'Enjoyed my stay at Planet Express, but the occasional delivery missions were distracting.',
+			'The Council of Ricks Penthouse was luxurious and had amazing amenities. However, the constant activity and noise from the Ricks made it less relaxing than I had hoped.',
 		stars: 4.3,
 	},
 	{
 		userId: 5,
 		spotId: 5,
 		review:
-			'Luxurious penthouse with great amenities, but the Ricks were quite noisy.',
+			"The Slurm Queen's Bungalow had a vibrant atmosphere, especially with its proximity to the Slurm Factory. However, it was a bit too lively and chaotic for my personal taste.",
 		stars: 4.1,
 	},
 	{
 		userId: 1,
 		spotId: 6,
 		review:
-			'Not a fan of the strict security measures, but the view was worth it.',
+			"The Devil's Dancefloor Suite was a blast if you're into parties. The atmosphere was energetic and the location in Robot Hell provided a wild, unforgettable experience.",
 		stars: 3.7,
 	},
 	{
 		userId: 2,
 		spotId: 7,
 		review:
-			'Fun atmosphere near the Slurm Factory, but a bit too lively for my liking.',
+			'The Cosmic Cruiser was thrilling, but it might be too extreme for some. The luxury and space travel experience were amazing, but the intensity of the trip was a bit much for me.',
 		stars: 3.9,
 	},
 	{
@@ -63,13 +70,15 @@ const reviews = [
 	{
 		userId: 4,
 		spotId: 9,
-		review: 'Robot Hell is definitely an experience, but not for everyone.',
+		review:
+			"Rick's Garage Hideaway was intriguing, but the constant portal noises were quite annoying. The setting was unique, but the disturbances detracted from the overall experience.",
 		stars: 2.8,
 	},
 	{
 		userId: 5,
 		spotId: 10,
-		review: 'Great for thrill-seekers, but I found it a bit too extreme.',
+		review:
+			'I loved the quirky vibes of the Planet Express HQ! It was a highly enjoyable experience with a lot of interesting features and a great view of New New York.',
 		stars: 3.2,
 	},
 	{
@@ -89,13 +98,14 @@ const reviews = [
 		userId: 3,
 		spotId: 13,
 		review:
-			'The Citadel of Ricks is fascinating, but the constant political debates got tiring.',
+			'The Citadel of Ricks is a fascinating place with its unique atmosphere. However, the constant political debates among the Ricks became a bit tiresome over time.',
 		stars: 3.8,
 	},
 	{
 		userId: 4,
 		spotId: 14,
-		review: 'Amazing place if you love Slurm, but beware of the sugar rush!',
+		review:
+			"Staying near the Slurm Factory at the Slurm Queen's Bungalow was amazing if you're a fan of Slurm. The experience was lively and full of energy, though the sugar rush might be overwhelming.",
 		stars: 4.5,
 	},
 	{

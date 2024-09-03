@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
-import { SlMagicWand } from 'react-icons/sl';
+import { GiAlienFire } from 'react-icons/gi';
+import { GiAlienEgg } from 'react-icons/gi';
 
 export default function SpotTile(props) {
 	const { spot } = props;
 
 	return (
-		<Link to={`/${spot.id}`} className='tiles'>
+		<Link to={`/spots/${spot.id}`} className='tiles'>
 			<div className='image-container'>
 				<img
 					className='tile-img'
@@ -22,24 +23,34 @@ export default function SpotTile(props) {
 						{spot.city}, {spot.state}
 					</div>
 					<div className='rating'>
-						{spot.avgRating ? spot.avgRating.toFixed(2) : ' *New!* '}{' '}
-						<SlMagicWand
-							style={{
-								color: '#6a0dad',
-								fontSize: '0.8rem',
-							}}></SlMagicWand>
+						{spot.avgRating ? (
+							<>
+								{spot.avgRating.toFixed(2)}
+								<GiAlienFire
+									style={{
+										color: '#6a0dad',
+										fontSize: '1rem',
+									}}
+								/>{' '}
+							</>
+						) : (
+							' *New!* '
+						)}{' '}
 					</div>
 				</div>
 				<div className='price'>
-					<span id='price'>${spot.price}</span>
-					<span id='night'>/night</span>
+					<span id='price'>
+						{spot.price}
+						<GiAlienEgg
+							style={{
+								color: 'teal',
+								fontSize: '1rem',
+							}}
+						/>
+					</span>
+					<span id='night'>&nbsp;/night</span>
 				</div>
 			</div>
 		</Link>
 	);
 }
-
-
-// <SlMagicWand
-// style={{ color: '#6a0dad', fontSize: '0.9em' }}
-// />;

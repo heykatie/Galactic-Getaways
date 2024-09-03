@@ -10,9 +10,49 @@ const spotImages = [
 		preview: true,
 	},
 	{
+		spotId: 1,
+		url: 'https://i.pinimg.com/originals/2d/51/b0/2d51b07e3c4fa89d77618cec4c95ff48.jpg',
+		preview: false,
+	},
+	{
+		spotId: 1,
+		url: 'https://i.pinimg.com/originals/ba/47/b1/ba47b19b128115fb8dbf5bfad1001eed.jpg',
+		preview: false,
+	},
+	{
+		spotId: 1,
+		url: 'https://as2.ftcdn.net/v2/jpg/06/01/92/07/1000_F_601920739_QgHMXRKV12O32sgKasgK8ImPRhUJ3NCm.jpg',
+		preview: false,
+	},
+	{
+		spotId: 1,
+		url: 'https://as2.ftcdn.net/v2/jpg/04/71/86/77/1000_F_471867739_bRFlSA9iKzrgwleCKVZDKqZBiN5JX8ue.jpg',
+		preview: false,
+	},
+	{
 		spotId: 2,
 		url: 'https://hips.hearstapps.com/hmg-prod/images/edc100123egan-002-6500742f5feb7.jpg?crop=0.688xw:1.00xh;0.157xw,0&resize=980:*', // Planet Express HQ
 		preview: true,
+	},
+	{
+		spotId: 2,
+		url: 'https://www.willsill.co.uk/wp-content/uploads/2022/01/Cool-office-1.jpg', // Planet Express HQ
+		preview: false,
+	},
+	{
+		spotId: 2,
+		url: 'https://assets-blog.s3.amazonaws.com/office-furniture-blog/wp-content/uploads/2021/04/08004227/interior-4406045_1280-1080x540.jpeg', // Planet Express HQ
+		preview: false,
+	},
+	{
+		spotId: 2,
+		url: 'https://assets.hongkiat.com/uploads/creative_modern_office_design/Google_Zurich_creative_office2.jpg', // Planet Express HQ
+		preview: false,
+	},
+	{
+		spotId: 2,
+		url: 'https://assets.entrepreneur.com/content/3x2/2000/20160421183052-google-slides-tel-aviv.jpeg?format=pjeg&auto=webp&crop=16:9&width=675&height=380', // Planet Express HQ
+		preview: false,
 	},
 	{
 		spotId: 3,
