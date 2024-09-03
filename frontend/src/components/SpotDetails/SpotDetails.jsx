@@ -81,13 +81,13 @@ export default function SpotDetails() {
 						<div id='rating-reviews'>
 							{spot.avgStarRating && (
 								<span id='rating'>
-									{spot.avgStarRating.toFixed(2)}
 									<GiAlienFire
 										style={{
 											color: '#6a0dad',
 											fontSize: '1rem',
 										}}
 									/>
+									{spot.avgStarRating.toFixed(1)}
 									&nbsp;
 								</span>
 							)}
