@@ -3,7 +3,6 @@
 }
 
 .profile-dropdown {
-  top: calc(100% + 5px);
   right: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -16,9 +15,78 @@
   width: max-content;
   z-index: 10;
   position: absolute;
+  font-family: var(--font-body);
+  font-size: 16px;
+}
+
+.profile-dropdown li {
+  padding: .3rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.profile-dropdown li:last-child {
+  border-bottom: none;
 }
 
 #button {
   margin: 0 10px;
   position: relative;
+}
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 80px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 5px;
+  position: relative;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Hamburger menu */
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.menu-icon .bar {
+  height: 2px;
+  background-color: #333;
+  border-radius: 2px;
+  margin-left: 2px;
+}
+
+.menu-icon .bar:hover {
+  background: var(--accent-color);
+}
+
+/* Profile picture */
+.profile-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.profile-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-gradient);
+  border: 2px solid #333;
+  /* Optional, for the black border */
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 30px;
+  /* Adjust icon size */
+  color: #333;
 }

@@ -18,16 +18,23 @@
 #left {
   display: flex;
   align-items: center;
+  margin-left: .5rem;
 }
 
-#logo, #name {
-  height: 2.5rem;
+#logo {
+  height: 3.5rem;
   margin-right: 10px;
+}
+
+#name {
+  height: 3rem;
+  margin-right: 15px;
 }
 
 #right {
   display: flex;
   align-items: center;
+  margin-right: .5rem;
 }
 
 #createSpot {
@@ -38,4 +45,17 @@
   /* display: inline-block;
   position: relative; */
   align-items: center;
+}
+
+.navbar a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+  font-family: var(--font-title);
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--accent-color);
 }

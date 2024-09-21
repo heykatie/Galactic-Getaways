@@ -12,6 +12,8 @@ import * as sessionActions from './store/session';
 
 import { restoreCSRF, csrfFetch } from './store/csrf';
 
+import './index.css'
+
 // setup store
 const store = configureStore();
 
