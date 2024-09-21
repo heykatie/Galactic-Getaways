@@ -1,0 +1,41 @@
+.nav {
+  max-width: fill;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#left {
+  display: flex;
+  align-items: center;
+}
+
+#logo, #name {
+  height: 2.5rem;
+  margin-right: 10px;
+}
+
+#right {
+  display: flex;
+  align-items: center;
+}
+
+#createSpot {
+  margin-right: 15px;
+}
+
+#userButton {
+  /* display: inline-block;
+  position: relative; */
+  align-items: center;
+}
