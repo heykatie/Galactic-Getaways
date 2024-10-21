@@ -186,7 +186,7 @@ const spots = [
 	},
 	{
 		address: '909 Black Hole Blvd',
-		city: 'Sagittarius A*',
+		city: 'Sag A*',
 		state: 'Galactic Center',
 		country: 'Milky Way',
 		lat: -28.5505,

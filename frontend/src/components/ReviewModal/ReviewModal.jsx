@@ -1,120 +1,95 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useModal } from '../../context/Modal';
 import { makeReview } from '../../store/reviews';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import { FaStar } from 'react-icons/fa';
+import { GiCrackedAlienSkull } from 'react-icons/gi';
 
 export default function ReviewModal({ spotId }) {
-  const session = useSelector((state) => state.session);
-  const [review, setReview] = useState('');
-  const [stars, setStars] = useState(0);
-  const [valErrors, setValErrors] = useState({});
-  const [submitted, setSubmitted] = useState(false);
-  const { closeModal } = useModal();
-  const dispatch = useDispatch();
-  const [rating, setRating] = useState(0);
+	const session = useSelector((state) => state.session);
+	const [review, setReview] = useState('');
+	const [stars, setStars] = useState(0);
+	const [hoverStars, setHoverStars] = useState(0);
+	const [valErrors, setValErrors] = useState({});
+	const [submitted, setSubmitted] = useState(false);
+	const { closeModal } = useModal();
+	const dispatch = useDispatch();
 
-  useEffect(() => {
-    const errors = {};
-    if (review.length < 1) errors.review = 'Review must have text';
-    if (stars < 1 || stars > 5)
-      errors.stars = 'stars must be between 1 and 5';
-    setValErrors(errors);
-  }, [review, stars]);
+	const validateForm = () => {
+		const errors = {};
+		if (review.length < 10)
+			errors.review = 'Review must be at least 10 characters long';
+		if (stars < 1 || stars > 5)
+			errors.stars = 'Stars must be between 1 and 5';
+		setValErrors(errors);
+	};
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-    if (Object.values(valErrors).length) {
-      return;
-    }
-    const newReview = {
-      review,
-      stars,
-    };
-    await dispatch(makeReview(session.user, spotId, newReview));
-    closeModal();
-  };
+	const handleReviewChange = (e) => {
+		setReview(e.target.value);
+		validateForm();
+	};
 
-  return (
-    <div className='review-modal'>
-      <h2>How was your stay?</h2>
-      <form>
-        <textarea
-          className='text'
-          placeholder='Leave your review here...'
-          name='review'
-          value={review}
-          onChange={(e) => setReview(e.target.value)}
-        />
-        <div className='rating-input'>
-          <span
-            className={
-              stars > 0 || rating > 0 ? 'filled' : 'empty'
-            }>
-            <FaStar
-              onMouseEnter={() => setRating(1)}
-              onMouseLeave={() => setRating(stars)}
-              onClick={() => setStars(1)}
-            />
-          </span>
-          <span
-            className={
-              stars > 1 || rating > 1 ? 'filled' : 'empty'
-            }>
-            <FaStar
-              onMouseEnter={() => setRating(2)}
-              onMouseLeave={() => setRating(stars)}
-              onClick={() => setStars(2)}
-            />
-          </span>
-          <span
-            className={
-              stars > 2 || rating > 2 ? 'filled' : 'empty'
-            }>
-            <FaStar
-              onMouseEnter={() => setRating(3)}
-              onMouseLeave={() => setRating(stars)}
-              onClick={() => setStars(3)}
-            />
-          </span>
-          <span
-            className={
-              stars > 3 || rating > 3 ? 'filled' : 'empty'
-            }>
-            <FaStar
-              onMouseEnter={() => setRating(4)}
-              onMouseLeave={() => setRating(stars)}
-              onClick={() => setStars(4)}
-            />
-          </span>
-          <span
-            className={
-              stars > 4 || rating > 4 ? 'filled' : 'empty'
-            }>
-            <FaStar
-              onMouseEnter={() => setRating(5)}
-              onMouseLeave={() => setRating(stars)}
-              onClick={() => setStars(5)}
-            />
-          </span>
-          <label>Stars</label>
-        </div>
+	const handleStarClick = (newRating) => {
+		setStars(newRating);
+		validateForm();
+	};
 
-        <button
-          className='review-button'
-          disabled={review.length < 10 || stars < 1}
-          onClick={handleSubmit}>
-          Submit your Review
-        </button>
-        {submitted && valErrors.review && (
-          <p className='errors'>{valErrors.review}</p>
-        )}
-        {submitted && valErrors.stars && (
-          <p className='errors'>{valErrors.stars}</p>
-        )}
-      </form>
-    </div>
-  );
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		setSubmitted(true);
+		validateForm();
+
+		if (Object.keys(valErrors).length > 0) return;
+
+		const newReview = { review, stars };
+		await dispatch(makeReview(session.user, spotId, newReview));
+		closeModal();
+	};
+
+	return (
+		<div className='review-modal'>
+			<h2>How was your stay?</h2>
+			<form id='review-form'>
+				<textarea
+					className='text'
+					placeholder='Leave your review here...'
+					name='review'
+					value={review}
+					onChange={handleReviewChange}
+				/>
+				<div className='rating-input'>
+					{[...Array(5)].map((_, i) => (
+						<span
+							key={i}
+							onMouseEnter={() => setHoverStars(i + 1)}
+							onMouseLeave={() => setHoverStars(0)}
+							onClick={() => handleStarClick(i + 1)}
+							style={{ cursor: 'pointer' }}>
+							<GiCrackedAlienSkull
+								size={30}
+								color={
+									i + 1 <= (hoverStars || stars) ? '#f5a623' : '#ccc'
+								}
+							/>
+						</span>
+					))}
+					<label> Stars</label>
+				</div>
+
+				<button
+					className='review-button'
+					disabled={Object.keys(valErrors).length > 0}
+					onClick={handleSubmit}>
+					Submit your Review
+				</button>
+
+				{submitted && valErrors.review && (
+					<p className='errors'>{valErrors.review}</p>
+				)}
+				{submitted && valErrors.stars && (
+					<p className='errors'>{valErrors.stars}</p>
+				)}
+			</form>
+		</div>
+	);
 }

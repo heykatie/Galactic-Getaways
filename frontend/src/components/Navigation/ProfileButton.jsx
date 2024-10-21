@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate, NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { FaUserCircle } from 'react-icons/fa';
+import { GiAlienStare } from 'react-icons/gi';
 import * as sessionActions from '../../store/session';
 import OpenModalMenuItem from './OpenModalMenuItem';
 import LoginFormModal from '../LoginFormModal';
 import SignupFormModal from '../SignupFormModal';
+import './ProfileButton.css';
 
 function ProfileButton({ user }) {
 	const dispatch = useDispatch();
@@ -43,20 +44,29 @@ function ProfileButton({ user }) {
 
 	return (
 		<div className='user-menu'>
-			<button onClick={toggleMenu}>
-				<FaUserCircle />
-			</button>
+			<div className='profile-button' onClick={toggleMenu}>
+				<div className='menu-icon'>
+					<div className='bar'></div>
+					<div className='bar'></div>
+					<div className='bar'></div>
+				</div>
+				<div className='profile-wrapper'>
+					<div className='profile-picture' onClick={toggleMenu}>
+						<GiAlienStare />
+					</div>
+				</div>
+			</div>
 			<ul className={ulClassName} ref={ulRef}>
 				{user ? (
 					<>
 						{/* <li>{user.username} {user.lastName}</li> */}
-						<li>Hello, {user.firstName}</li>
+						<li>Hello, {user.firstName}!</li>
 						<li>{user.email}</li>
 						<li id='manage-spots'>
 							<NavLink to='/spots/manage'>Manage Spots</NavLink>
 						</li>
 						<li>
-							<button onClick={logout}>Log Out</button>
+							<button id='logout-button' onClick={logout}>Log Out</button>
 						</li>
 					</>
 				) : (

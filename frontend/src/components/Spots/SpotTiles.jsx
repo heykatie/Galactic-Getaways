@@ -34,7 +34,15 @@ export default function SpotTile(props) {
 								{spot.avgRating.toFixed(1)}
 							</>
 						) : (
-							' *New!* '
+							(<>
+								<GiAlienFire
+									style={{
+										color: '#6a0dad',
+										fontSize: '1rem',
+									}}
+								/>
+								{'*New!* '}
+							</>)
 						)}{' '}
 					</div>
 				</div>

@@ -59,8 +59,11 @@ export default function SpotForm() {
 		if (formData.price <= 0) errors.price = 'Price must be greater than $0';
 		if (formData.prevImg.trim() === '')
 			errors.prevImg = 'Preview Image is required';
-		if (formData.image && !/\.(jpg|jpeg|png)$/i.test(formData.image)) {
+		if (formData.image && (!formData.image.match(/\.(png|jpg|jpeg)/i))) {
 			errors.image = 'Image URL must end in .png, .jpg, or .jpeg';
+		}
+		if (formData.prevImg && (!/\.(png|jpg|jpeg)$/i.test(formData.prevImg))) {
+			errors.prevImg = 'Image URL must end in .png, .jpg, or .jpeg';
 		}
 
 		setValErrors(errors);
@@ -71,7 +74,7 @@ export default function SpotForm() {
 		setSubmitted(true);
 		if (Object.keys(valErrors).length) return;
 		const newSpot = await dispatch(makeSpot(formData));
-		navigate(`/${newSpot.id}`);
+		navigate(`/spots/${newSpot.id}`);
 	};
 
 	return (

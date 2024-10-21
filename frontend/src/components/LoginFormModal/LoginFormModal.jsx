@@ -43,38 +43,41 @@ function LoginFormModal() {
 	return (
 		<div className='login'>
 			<h1>Log In</h1>
-			{errors.message && <p>{errors.message}</p>}
-			<form onSubmit={handleSubmit}>
-				<input
-					className='input'
-					type='text'
-					placeholder='Username or Email'
-					value={credential}
-					onChange={(e) => setCredential(e.target.value)}
-					required
-				/>
+			<div className='login-form'>
+				{errors.message && <p>{errors.message}</p>}
+				<form onSubmit={handleSubmit}>
+					<input
+						className='input'
+						type='text'
+						placeholder='Username or Email'
+						value={credential}
+						onChange={(e) => setCredential(e.target.value)}
+						required
+					/>
+					<br></br>
+					<input
+						type='password'
+						className='input'
+						placeholder='Password'
+						value={password}
+						onChange={(e) => setPassword(e.target.value)}
+						required
+					/>
+					<br></br>
+					<br></br>
+					<button
+						type='submit'
+						disabled={credential.length < 4 || password.length < 6}>
+						Log In
+					</button>
+				</form>
 				<br></br>
-				<input
-					type='password'
-					className='input'
-					placeholder='Password'
-					value={password}
-					onChange={(e) => setPassword(e.target.value)}
-					required
-				/>
-				<br></br>
-				<br></br>
-				<button
-					type='submit'
-					disabled={credential.length < 4 || password.length < 6}>
-					Log In
-				</button>
-			</form>
-			<br></br>
-			<a href='#' onClick={demoLogin} id='demo-login' className='demo-link'>
-				Log in as Demo User
-			</a>
+				<a href='#' onClick={demoLogin} id='demo-login' className='demo-link'>
+					Log in as Demo User
+					</a>
+			</div>
 		</div>
+
 	);
 }
 
