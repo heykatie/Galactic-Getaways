@@ -286,53 +286,53 @@ const spotImages = [
 	},
 	{
 		spotId: 12,
-		url: 'http://www.historyofrefrigeration.com/images/historyofrefrigeration/picture-of-ice-house-in-eglinton-country-park-kilwinning-north-ayrshire-scotland.JPG', // Futuristic Home Interior
+		url: 'https://media.techeblog.com/images/house-inside-a-rock.jpg', // Futuristic Home Interior
 		preview: true,
 	},
 	{
 		spotId: 12,
-		url: 'http://www.historyofrefrigeration.com/images/historyofrefrigeration/picture-of-ice-house-in-eglinton-country-park-kilwinning-north-ayrshire-scotland.JPG', // Futuristic Home Interior
+		url: 'https://media.techeblog.com/images/house-inside-a-rock.jpg', // Futuristic Home Interior
 		preview: false,
 	},
 	{
 		spotId: 12,
-		url: 'http://www.historyofrefrigeration.com/images/historyofrefrigeration/picture-of-ice-house-in-eglinton-country-park-kilwinning-north-ayrshire-scotland.JPG', // Futuristic Home Interior
+		url: 'https://media.techeblog.com/images/house-inside-a-rock.jpg', // Futuristic Home Interior
 		preview: false,
 	},
 	{
 		spotId: 12,
-		url: 'http://www.historyofrefrigeration.com/images/historyofrefrigeration/picture-of-ice-house-in-eglinton-country-park-kilwinning-north-ayrshire-scotland.JPG', // Futuristic Home Interior
+		url: 'https://masterpiecer-images.s3.yandex.net/4677a4aa689c11ee8b194659bdca6a39:upscaled', // Futuristic Home Interior
 		preview: false,
 	},
 	{
 		spotId: 12,
-		url: 'http://www.historyofrefrigeration.com/images/historyofrefrigeration/picture-of-ice-house-in-eglinton-country-park-kilwinning-north-ayrshire-scotland.JPG', // Futuristic Home Interior
+		url: 'https://masterpiecer-images.s3.yandex.net/4677a4aa689c11ee8b194659bdca6a39:upscaled', // Futuristic Home Interior
 		preview: false,
 	},
 	{
 		spotId: 13,
-		url: 'http://www.historyofrefrigeration.com/images/historyofrefrigeration/picture-of-ice-house-in-eglinton-country-park-kilwinning-north-ayrshire-scotland.JPG',
+		url: 'https://masterpiecer-images.s3.yandex.net/4677a4aa689c11ee8b194659bdca6a39:upscaled',
 		preview: true,
 	},
 
 	{
 		spotId: 13,
-		url: 'http://www.historyofrefrigeration.com/images/historyofrefrigeration/picture-of-ice-house-in-eglinton-country-park-kilwinning-north-ayrshire-scotland.JPG',
+		url: 'https://masterpiecer-images.s3.yandex.net/4677a4aa689c11ee8b194659bdca6a39:upscaled',
 		preview: false,
 	},
 	{
 		spotId: 13,
-		url: 'http://www.historyofrefrigeration.com/images/historyofrefrigeration/picture-of-ice-house-in-eglinton-country-park-kilwinning-north-ayrshire-scotland.JPG',
+		url: 'https://masterpiecer-images.s3.yandex.net/4677a4aa689c11ee8b194659bdca6a39:upscaled',
 		preview: false,
 	},
 	{
 		spotId: 13,
-		url: 'http://www.historyofrefrigeration.com/images/historyofrefrigeration/picture-of-ice-house-in-eglinton-country-park-kilwinning-north-ayrshire-scotland.JPG',
+		url: 'https://masterpiecer-images.s3.yandex.net/4677a4aa689c11ee8b194659bdca6a39:upscaled',
 		preview: false,
 	},
 	{
 		spotId: 13,
-		url: 'http://www.historyofrefrigeration.com/images/historyofrefrigeration/picture-of-ice-house-in-eglinton-country-park-kilwinning-north-ayrshire-scotland.JPG',
+		url: 'https://masterpiecer-images.s3.yandex.net/4677a4aa689c11ee8b194659bdca6a39:upscaled',
 		preview: false,
 	},
 	{
