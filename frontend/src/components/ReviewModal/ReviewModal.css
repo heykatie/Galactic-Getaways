@@ -5,7 +5,6 @@
   align-items: center;
 }
 
-
 .text {
   width: 100%;
   height: 80px;
@@ -20,6 +19,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .review-button {
@@ -31,16 +31,22 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 20px;
 }
 
-.review-button:disabled {
-  background-color: #ccc;
+.review-button button:disabled:hover {
+  background-color: #f0f0f0;
+  color: #a0a0a0;
   cursor: not-allowed;
 }
-
 
 .errors {
   color: red;
   font-size: 0.9rem;
   margin-top: 10px;
+  text-align: center;
+  padding: 5px;
+  background-color: #ffe6e6;
+  border-radius: 5px;
+  width: 100%;
 }

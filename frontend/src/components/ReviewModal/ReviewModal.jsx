@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useModal } from '../../context/Modal';
 import { makeReview } from '../../store/reviews';
 import { useDispatch } from 'react-redux';
@@ -8,31 +8,40 @@ import { GiCrackedAlienSkull } from 'react-icons/gi';
 export default function ReviewModal({ spotId }) {
 	const session = useSelector((state) => state.session);
 	const [review, setReview] = useState('');
-	const [stars, setStars] = useState(0); // The actual clicked stars
-	const [hoverStars, setHoverStars] = useState(0); // To handle the hover state
+	const [stars, setStars] = useState(0);
+	const [hoverStars, setHoverStars] = useState(0);
 	const [valErrors, setValErrors] = useState({});
 	const [submitted, setSubmitted] = useState(false);
 	const { closeModal } = useModal();
 	const dispatch = useDispatch();
 
-	useEffect(() => {
+	const validateForm = () => {
 		const errors = {};
-		if (review.length < 1) errors.review = 'Review must have text';
+		if (review.length < 10)
+			errors.review = 'Review must be at least 10 characters long';
 		if (stars < 1 || stars > 5)
 			errors.stars = 'Stars must be between 1 and 5';
 		setValErrors(errors);
-	}, [review, stars]);
+	};
+
+	const handleReviewChange = (e) => {
+		setReview(e.target.value);
+		validateForm();
+	};
+
+	const handleStarClick = (newRating) => {
+		setStars(newRating);
+		validateForm();
+	};
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		setSubmitted(true);
-		if (Object.values(valErrors).length) {
-			return;
-		}
-		const newReview = {
-			review,
-			stars,
-		};
+		validateForm();
+
+		if (Object.keys(valErrors).length > 0) return;
+
+		const newReview = { review, stars };
 		await dispatch(makeReview(session.user, spotId, newReview));
 		closeModal();
 	};
@@ -46,22 +55,21 @@ export default function ReviewModal({ spotId }) {
 					placeholder='Leave your review here...'
 					name='review'
 					value={review}
-					onChange={(e) => setReview(e.target.value)}
+					onChange={handleReviewChange}
 				/>
 				<div className='rating-input'>
-					{/* Render 5 skulls */}
 					{[...Array(5)].map((_, i) => (
 						<span
 							key={i}
-							onMouseEnter={() => setHoverStars(i + 1)} // Set hover state
-							onMouseLeave={() => setHoverStars(0)} // Reset hover state
-							onClick={() => setStars(i + 1)} // Set the clicked stars
+							onMouseEnter={() => setHoverStars(i + 1)}
+							onMouseLeave={() => setHoverStars(0)}
+							onClick={() => handleStarClick(i + 1)}
 							style={{ cursor: 'pointer' }}>
 							<GiCrackedAlienSkull
-								size={30} // Adjust size as needed
+								size={30}
 								color={
 									i + 1 <= (hoverStars || stars) ? '#f5a623' : '#ccc'
-								} // Change color dynamically
+								}
 							/>
 						</span>
 					))}
@@ -70,10 +78,11 @@ export default function ReviewModal({ spotId }) {
 
 				<button
 					className='review-button'
-					disabled={review.length < 10 || stars < 1}
+					disabled={Object.keys(valErrors).length > 0}
 					onClick={handleSubmit}>
 					Submit your Review
 				</button>
+
 				{submitted && valErrors.review && (
 					<p className='errors'>{valErrors.review}</p>
 				)}
