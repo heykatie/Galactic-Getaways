@@ -17,8 +17,8 @@ export default function RatingReview({spot}) {
 			<span id='reviews'>
 				{spot.numReviews
 					? spot.numReviews === 1
-						? ` • ${spot?.numReviews} review`
-						: ` • ${spot?.numReviews} reviews`
+						? `• ${spot?.numReviews} review`
+						: `• ${spot?.numReviews} reviews`
 					: '*New*'}
 			</span>
 		</div>

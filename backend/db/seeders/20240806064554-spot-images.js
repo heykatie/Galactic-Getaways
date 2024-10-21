@@ -60,9 +60,49 @@ const spotImages = [
 		preview: true,
 	},
 	{
+		spotId: 3,
+		url: 'https://www.the-sun.com/wp-content/uploads/sites/6/2022/07/NINTCHDBPICT000750103510.jpg?strip=all&w=960', // The Citadel
+		preview: false,
+	},
+	{
+		spotId: 3,
+		url: 'https://www.the-sun.com/wp-content/uploads/sites/6/2022/07/NINTCHDBPICT000750103510.jpg?strip=all&w=960', // The Citadel
+		preview: false,
+	},
+	{
+		spotId: 3,
+		url: 'https://www.the-sun.com/wp-content/uploads/sites/6/2022/07/NINTCHDBPICT000750103510.jpg?strip=all&w=960', // The Citadel
+		preview: false,
+	},
+	{
+		spotId: 3,
+		url: 'https://www.the-sun.com/wp-content/uploads/sites/6/2022/07/NINTCHDBPICT000750103510.jpg?strip=all&w=960', // The Citadel
+		preview: false,
+	},
+	{
 		spotId: 4,
 		url: 'https://preview.redd.it/underwater-houses-and-spaces-which-do-you-prefer-pretend-we-v0-kt7b05rq9oob1.jpg?width=640&crop=smart&auto=webp&s=70de606ddc09117f9c337f9d35073bd7a0c8afb4', // Futuristic Prefab Home
 		preview: true,
+	},
+	{
+		spotId: 4,
+		url: 'https://preview.redd.it/underwater-houses-and-spaces-which-do-you-prefer-pretend-we-v0-kt7b05rq9oob1.jpg?width=640&crop=smart&auto=webp&s=70de606ddc09117f9c337f9d35073bd7a0c8afb4', // Futuristic Prefab Home
+		preview: false,
+	},
+	{
+		spotId: 4,
+		url: 'https://preview.redd.it/underwater-houses-and-spaces-which-do-you-prefer-pretend-we-v0-kt7b05rq9oob1.jpg?width=640&crop=smart&auto=webp&s=70de606ddc09117f9c337f9d35073bd7a0c8afb4', // Futuristic Prefab Home
+		preview: false,
+	},
+	{
+		spotId: 4,
+		url: 'https://preview.redd.it/underwater-houses-and-spaces-which-do-you-prefer-pretend-we-v0-kt7b05rq9oob1.jpg?width=640&crop=smart&auto=webp&s=70de606ddc09117f9c337f9d35073bd7a0c8afb4', // Futuristic Prefab Home
+		preview: false,
+	},
+	{
+		spotId: 4,
+		url: 'https://preview.redd.it/underwater-houses-and-spaces-which-do-you-prefer-pretend-we-v0-kt7b05rq9oob1.jpg?width=640&crop=smart&auto=webp&s=70de606ddc09117f9c337f9d35073bd7a0c8afb4', // Futuristic Prefab Home
+		preview: false,
 	},
 	{
 		spotId: 5,
@@ -70,9 +110,54 @@ const spotImages = [
 		preview: true,
 	},
 	{
+		spotId: 5,
+		url: 'https://preview.redd.it/underwater-houses-and-spaces-which-do-you-prefer-pretend-we-v0-e7i6egrq9oob1.jpg?width=640&crop=smart&auto=webp&s=b39559b446a4aa0c00f103334398d7df4ea6654f', // Underwater Home
+		preview: false,
+	},
+	{
+		spotId: 5,
+		url: 'https://preview.redd.it/underwater-houses-and-spaces-which-do-you-prefer-pretend-we-v0-e7i6egrq9oob1.jpg?width=640&crop=smart&auto=webp&s=b39559b446a4aa0c00f103334398d7df4ea6654f', // Underwater Home
+		preview: false,
+	},
+	{
+		spotId: 5,
+		url: 'https://preview.redd.it/underwater-houses-and-spaces-which-do-you-prefer-pretend-we-v0-e7i6egrq9oob1.jpg?width=640&crop=smart&auto=webp&s=b39559b446a4aa0c00f103334398d7df4ea6654f', // Underwater Home
+		preview: false,
+	},
+	{
+		spotId: 5,
+		url: 'https://preview.redd.it/underwater-houses-and-spaces-which-do-you-prefer-pretend-we-v0-e7i6egrq9oob1.jpg?width=640&crop=smart&auto=webp&s=b39559b446a4aa0c00f103334398d7df4ea6654f', // Underwater Home
+		preview: false,
+	},
+	{
 		spotId: 6,
-		url: 'https://i0.wp.com/trendland.com/wp-content/uploads/2019/09/Precht-Bert-Treehouse-04.jpg?resize=770%2C1001&ssl=1', // Sky Pod Home
+		url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1K31HZCSuasej2ycJcbfBMAk6cyLv_q0MwA&s', // Sky Pod Home
 		preview: true,
+	},
+	{
+		spotId: 6,
+		url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1K31HZCSuasej2ycJcbfBMAk6cyLv_q0MwA&s', // Sky Pod Home
+		preview: true,
+	},
+	{
+		spotId: 6,
+		url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1K31HZCSuasej2ycJcbfBMAk6cyLv_q0MwA&s', // Sky Pod Home
+		preview: false,
+	},
+	{
+		spotId: 6,
+		url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1K31HZCSuasej2ycJcbfBMAk6cyLv_q0MwA&s', // Sky Pod Home
+		preview: false,
+	},
+	{
+		spotId: 6,
+		url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1K31HZCSuasej2ycJcbfBMAk6cyLv_q0MwA&s', // Sky Pod Home
+		preview: false,
+	},
+	{
+		spotId: 6,
+		url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1K31HZCSuasej2ycJcbfBMAk6cyLv_q0MwA&s', // Sky Pod Home
+		preview: false,
 	},
 	{
 		spotId: 7,
@@ -80,9 +165,49 @@ const spotImages = [
 		preview: true,
 	},
 	{
+		spotId: 7,
+		url: 'https://media.hostunusual.com/wp-content/uploads/2022/04/31190849/invisible-house-main.jpg', // Rotating Skyscraper Apartment
+		preview: false,
+	},
+	{
+		spotId: 7,
+		url: 'https://media.hostunusual.com/wp-content/uploads/2022/04/31190849/invisible-house-main.jpg', // Rotating Skyscraper Apartment
+		preview: false,
+	},
+	{
+		spotId: 7,
+		url: 'https://media.hostunusual.com/wp-content/uploads/2022/04/31190849/invisible-house-main.jpg', // Rotating Skyscraper Apartment
+		preview: false,
+	},
+	{
+		spotId: 7,
+		url: 'https://media.hostunusual.com/wp-content/uploads/2022/04/31190849/invisible-house-main.jpg', // Rotating Skyscraper Apartment
+		preview: false,
+	},
+	{
 		spotId: 8,
 		url: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/G2_Global_model_Earthship_Taos_N.M..JPG', // Deep Ocean Habitat
 		preview: true,
+	},
+	{
+		spotId: 8,
+		url: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/G2_Global_model_Earthship_Taos_N.M..JPG', // Deep Ocean Habitat
+		preview: false,
+	},
+	{
+		spotId: 8,
+		url: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/G2_Global_model_Earthship_Taos_N.M..JPG', // Deep Ocean Habitat
+		preview: false,
+	},
+	{
+		spotId: 8,
+		url: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/G2_Global_model_Earthship_Taos_N.M..JPG', // Deep Ocean Habitat
+		preview: false,
+	},
+	{
+		spotId: 8,
+		url: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/G2_Global_model_Earthship_Taos_N.M..JPG', // Deep Ocean Habitat
+		preview: false,
 	},
 	{
 		spotId: 9,
@@ -90,9 +215,49 @@ const spotImages = [
 		preview: true,
 	},
 	{
+		spotId: 9,
+		url: 'https://amazingarchitecture.com/storage/1508/responsive-images/spiral_house_antireality_usa___media_library_original_658_370.jpg', // Futuristic Kitchen Interior
+		preview: false,
+	},
+	{
+		spotId: 9,
+		url: 'https://amazingarchitecture.com/storage/1508/responsive-images/spiral_house_antireality_usa___media_library_original_658_370.jpg', // Futuristic Kitchen Interior
+		preview: false,
+	},
+	{
+		spotId: 9,
+		url: 'https://amazingarchitecture.com/storage/1508/responsive-images/spiral_house_antireality_usa___media_library_original_658_370.jpg', // Futuristic Kitchen Interior
+		preview: false,
+	},
+	{
+		spotId: 9,
+		url: 'https://amazingarchitecture.com/storage/1508/responsive-images/spiral_house_antireality_usa___media_library_original_658_370.jpg', // Futuristic Kitchen Interior
+		preview: false,
+	},
+	{
 		spotId: 10,
 		url: 'https://dornob.com/wp-content/uploads/2016/04/pyramid-house-4.jpg', // Futuristic Japanese House
 		preview: true,
+	},
+	{
+		spotId: 10,
+		url: 'https://dornob.com/wp-content/uploads/2016/04/pyramid-house-4.jpg', // Futuristic Japanese House
+		preview: false,
+	},
+	{
+		spotId: 10,
+		url: 'https://dornob.com/wp-content/uploads/2016/04/pyramid-house-4.jpg', // Futuristic Japanese House
+		preview: false,
+	},
+	{
+		spotId: 10,
+		url: 'https://dornob.com/wp-content/uploads/2016/04/pyramid-house-4.jpg', // Futuristic Japanese House
+		preview: false,
+	},
+	{
+		spotId: 10,
+		url: 'https://dornob.com/wp-content/uploads/2016/04/pyramid-house-4.jpg', // Futuristic Japanese House
+		preview: false,
 	},
 	{
 		spotId: 11,
@@ -100,13 +265,100 @@ const spotImages = [
 		preview: true,
 	},
 	{
+		spotId: 11,
+		url: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Pod_house_detail%2C_Perinton%2C_New_York.JPG', // Martian Colony Home
+		preview: false,
+	},
+	{
+		spotId: 11,
+		url: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Pod_house_detail%2C_Perinton%2C_New_York.JPG', // Martian Colony Home
+		preview: false,
+	},
+	{
+		spotId: 11,
+		url: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Pod_house_detail%2C_Perinton%2C_New_York.JPG', // Martian Colony Home
+		preview: false,
+	},
+	{
+		spotId: 11,
+		url: 'https://upload.wikimedia.org/wikipedia/commons/0/05/Pod_house_detail%2C_Perinton%2C_New_York.JPG', // Martian Colony Home
+		preview: false,
+	},
+	{
 		spotId: 12,
 		url: 'http://www.historyofrefrigeration.com/images/historyofrefrigeration/picture-of-ice-house-in-eglinton-country-park-kilwinning-north-ayrshire-scotland.JPG', // Futuristic Home Interior
 		preview: true,
 	},
 	{
+		spotId: 12,
+		url: 'http://www.historyofrefrigeration.com/images/historyofrefrigeration/picture-of-ice-house-in-eglinton-country-park-kilwinning-north-ayrshire-scotland.JPG', // Futuristic Home Interior
+		preview: false,
+	},
+	{
+		spotId: 12,
+		url: 'http://www.historyofrefrigeration.com/images/historyofrefrigeration/picture-of-ice-house-in-eglinton-country-park-kilwinning-north-ayrshire-scotland.JPG', // Futuristic Home Interior
+		preview: false,
+	},
+	{
+		spotId: 12,
+		url: 'http://www.historyofrefrigeration.com/images/historyofrefrigeration/picture-of-ice-house-in-eglinton-country-park-kilwinning-north-ayrshire-scotland.JPG', // Futuristic Home Interior
+		preview: false,
+	},
+	{
+		spotId: 12,
+		url: 'http://www.historyofrefrigeration.com/images/historyofrefrigeration/picture-of-ice-house-in-eglinton-country-park-kilwinning-north-ayrshire-scotland.JPG', // Futuristic Home Interior
+		preview: false,
+	},
+	{
 		spotId: 13,
 		url: 'http://www.historyofrefrigeration.com/images/historyofrefrigeration/picture-of-ice-house-in-eglinton-country-park-kilwinning-north-ayrshire-scotland.JPG',
+		preview: true,
+	},
+
+	{
+		spotId: 13,
+		url: 'http://www.historyofrefrigeration.com/images/historyofrefrigeration/picture-of-ice-house-in-eglinton-country-park-kilwinning-north-ayrshire-scotland.JPG',
+		preview: false,
+	},
+	{
+		spotId: 13,
+		url: 'http://www.historyofrefrigeration.com/images/historyofrefrigeration/picture-of-ice-house-in-eglinton-country-park-kilwinning-north-ayrshire-scotland.JPG',
+		preview: false,
+	},
+	{
+		spotId: 13,
+		url: 'http://www.historyofrefrigeration.com/images/historyofrefrigeration/picture-of-ice-house-in-eglinton-country-park-kilwinning-north-ayrshire-scotland.JPG',
+		preview: false,
+	},
+	{
+		spotId: 13,
+		url: 'http://www.historyofrefrigeration.com/images/historyofrefrigeration/picture-of-ice-house-in-eglinton-country-park-kilwinning-north-ayrshire-scotland.JPG',
+		preview: false,
+	},
+	{
+		spotId: 14,
+		url: 'https://raleighrealtyhomes.com/storage/uploads/kFfsOdOiZVy1Vwo4YwPh3F5rvltEj3Khe8FUY1ax.png',
+		preview: true,
+	},
+	{
+		spotId: 14,
+		url: 'https://raleighrealtyhomes.com/storage/uploads/kFfsOdOiZVy1Vwo4YwPh3F5rvltEj3Khe8FUY1ax.png',
+		preview: false,
+	},
+
+	{
+		spotId: 14,
+		url: 'https://raleighrealtyhomes.com/storage/uploads/kFfsOdOiZVy1Vwo4YwPh3F5rvltEj3Khe8FUY1ax.png',
+		preview: true,
+	},
+	{
+		spotId: 14,
+		url: 'https://raleighrealtyhomes.com/storage/uploads/kFfsOdOiZVy1Vwo4YwPh3F5rvltEj3Khe8FUY1ax.png',
+		preview: true,
+	},
+	{
+		spotId: 14,
+		url: 'https://raleighrealtyhomes.com/storage/uploads/kFfsOdOiZVy1Vwo4YwPh3F5rvltEj3Khe8FUY1ax.png',
 		preview: true,
 	},
 	{
@@ -118,6 +370,26 @@ const spotImages = [
 		spotId: 15,
 		url: 'https://c4.wallpaperflare.com/wallpaper/227/267/795/futurama-new-york-planet-express-wallpaper-preview.jpg',
 		preview: true,
+	},
+	{
+		spotId: 15,
+		url: 'https://c4.wallpaperflare.com/wallpaper/227/267/795/futurama-new-york-planet-express-wallpaper-preview.jpg',
+		preview: false,
+	},
+	{
+		spotId: 15,
+		url: 'https://c4.wallpaperflare.com/wallpaper/227/267/795/futurama-new-york-planet-express-wallpaper-preview.jpg',
+		preview: false,
+	},
+	{
+		spotId: 15,
+		url: 'https://c4.wallpaperflare.com/wallpaper/227/267/795/futurama-new-york-planet-express-wallpaper-preview.jpg',
+		preview: false,
+	},
+	{
+		spotId: 15,
+		url: 'https://c4.wallpaperflare.com/wallpaper/227/267/795/futurama-new-york-planet-express-wallpaper-preview.jpg',
+		preview: false,
 	},
 ];
 

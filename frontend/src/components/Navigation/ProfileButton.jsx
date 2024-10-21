@@ -66,7 +66,7 @@ function ProfileButton({ user }) {
 							<NavLink to='/spots/manage'>Manage Spots</NavLink>
 						</li>
 						<li>
-							<button onClick={logout}>Log Out</button>
+							<button id='logout-button' onClick={logout}>Log Out</button>
 						</li>
 					</>
 				) : (
