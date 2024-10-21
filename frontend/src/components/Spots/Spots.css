@@ -18,7 +18,6 @@ h1,
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
   padding: 20px;
-  width: 100%;
 }
 
 .tiles {
@@ -33,8 +32,8 @@ h1,
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 15px;
-  width: 100%;
-  height: 270px;
+  width: 260px;
+  height: 300px;
 }
 
 .tiles:hover {
@@ -45,7 +44,7 @@ h1,
 .image-container {
   position: relative;
   width: 100%;
-  height: 75%;
+  height: 100%;
 }
 
 .tile-img {
@@ -95,7 +94,7 @@ h1,
 .location {
   font-size: 15px;
   text-align: left;
-  padding-left: 2px;
+  /* padding-left: 2px; */
 }
 
 .rating {
@@ -108,7 +107,7 @@ h1,
 .price {
   font-size: 16px;
   text-align: left;
-  padding-left: 2px;
+  /* padding-left: 2px; */
   display: flex;
 }
 
