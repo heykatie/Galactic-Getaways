@@ -64,7 +64,7 @@ export default function ManageSpotsTiles(props) {
 						</div>
 					</div>
 				</Link>
-				{/* Place action buttons outside the Link */}
+
 				<div className='button-box'>
 					<button className='update' onClick={handleClick}>
 						Update

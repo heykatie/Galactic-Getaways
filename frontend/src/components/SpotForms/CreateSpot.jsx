@@ -20,8 +20,8 @@ export default function SpotForm() {
 		description: spot.description || '',
 		name: spot.name || '',
 		price: spot.price || 0,
-		prevImg: spot.prevImg || '', // Assuming prevImg is a URL
-		image: spot.image || '', // Assuming image is a URL
+		prevImg: spot.prevImg || '',
+		image: spot.image || '',
 	});
 
 	const [valErrors, setValErrors] = useState({});
@@ -33,7 +33,7 @@ export default function SpotForm() {
 	};
 
 	useEffect(() => {
-		dispatch(getSpotById(id)); // Pass `id` to getSpotById
+		dispatch(getSpotById(id)); 
 	}, [dispatch, id]);
 
 	useEffect(() => {
