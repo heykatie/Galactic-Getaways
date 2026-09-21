@@ -1,4 +1,4 @@
-# AirBnB Clone
+# Vacation Home Booking Platform
 
 ## Database Schema Design
 
